@@ -1,0 +1,10 @@
+services:
+#    grid.example:
+#        class: gridBundle\Example
+#        arguments: ["@service_id", "plain_value", "%parameter%"]
+     grid.simple:
+         class: gridBundle\Service\simpleGrid
+         arguments: [ "@templating"]
+     grid.onePage:
+         class: gridBundle\Service\perOnePage
+         arguments: [ "@templating"]

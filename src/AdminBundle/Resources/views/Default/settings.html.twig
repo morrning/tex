@@ -1,0 +1,22 @@
+{% extends 'AdminBundle:Default:basePage.html.twig' %}
+
+{% block adminTitle %}تنظیمات پایه سیستم{% endblock %}
+{% block adminContent %}
+    {{ form_start(form) }}
+    <div class="row">
+        <div class="col-md-12">
+            {{ form_label(form.sysmsg) }}
+            {{ form_widget(form.sysmsg) }}
+        </div>
+    </div>
+    <hr>
+    <div class="row">
+        <div class="col-md-2">
+            {{ form_widget(form.save) }}
+        </div>
+        <div class="col-md-10">
+            <a class="btn btn-default" href="{{ path('adminDashboard') }}">انصراف</a>
+        </div>
+    </div>
+    {{ form_end(form) }}
+{% endblock %}

@@ -1,0 +1,22 @@
+{% block jdate_widget %}
+        {% set type = 'jdate' %}
+        {% spaceless %}
+            <div class="form-group">
+                <label class="sr-only" for="exampleInput3">تاریخ</label>
+                <div class="input-group">
+                    <div class="input-group-addon" data-mddatetimepicker="true" data-trigger="click" data-targetselector="#{{ id }}">
+                        <span class="glyphicon glyphicon-calendar"></span>
+                    </div>
+                    <input type="{{ type }}" class="form-control" {{ block('widget_attributes') }} {% if value is not empty %}value="{{ value }}" {% endif %}
+                           id="form[name]"
+                           readonly="readonly"
+                           data-mddatetimepicker="false"
+                           placeholder="تاریخ"
+                           data-placement="right"
+                           data-englishnumber="false"
+                           data=""
+                    />
+                </div>
+            </div>
+        {% endspaceless %}
+{% endblock %}

@@ -1,0 +1,49 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}ورود کاربران{% endblock %}
+{% block body %}
+<div class="row" style="padding-top: 30px;">
+    <div class="col-centered col-md-6 col-xs-12">
+        <div class="panel panel-primary">
+            <div class="panel-heading">
+                <div class="panel-title">
+                    ورود کاربران
+                </div>
+            </div>
+            <div class="panel-body">
+                <div class="row">
+                    <div class="col-xs-12 col-md-4">
+                        <img class="img-responsive img-center img-thumbnail" src="{{ asset('images/userbundle/profileIcon.png') }}">
+                    </div>
+                    <div class="col-xs-12 col-md-8">
+                        {{ form_start(form) }}
+                        <div class="row">
+                            <div class="col-md-12">
+                                {{ form_label(form.Username) }}
+                                {{ form_widget(form.Username) }}
+                            </div>
+                            <div class="col-md-12">
+                                {{ form_label(form.Password) }}
+                                {{ form_widget(form.Password) }}
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="row">
+                            <div class="col-md-3">
+                                {{ form_label(form.save) }}
+                                {{ form_widget(form.save) }}
+                            </div>
+                            <div class="col-md-9">
+                                <a class="btn btn-success btn-block" href="{{ path('userRegister') }}">عضویت</a>
+                            </div>
+                        </div>
+                        {{ form_end(form) }}
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

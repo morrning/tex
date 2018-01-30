@@ -1,0 +1,55 @@
+{% extends 'base.html.twig' %}
+{% block title %}ثبت سفارش{% endblock %}
+{% block body %}
+
+
+    <div class="row">
+        <div class="col-md-8 col-centered">
+            <div class="panel panel-primary">
+                <div class="panel-heading">
+                    <div class="panel-title">
+                        ثبت سفارش
+                    </div>
+                </div>
+                <div class="panel-body">
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <div class="alert alert-info">
+                                ابتدا نوع سفارش خود را تعیین کنید و سپس آیتم‌های سفارش را تکمیل نمایید.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div>
+
+                            <!-- Nav tabs -->
+                            <ul class="nav nav-tabs" role="tablist">
+                                <li role="presentation" class="active"><a href="#tar" aria-controls="tar" role="tab" data-toggle="tab">سفارش ترجمه</a></li>
+                                <li role="presentation"><a href="#research" aria-controls="research" role="tab" data-toggle="tab">سفارش تحقیق</a></li>
+                                <li role="presentation"><a href="#tipe" aria-controls="tipe" role="tab" data-toggle="tab">سفارش تایپ</a></li>
+                            </ul>
+
+                            <!-- Tab panes -->
+                            <div class="tab-content">
+                                <div role="tabpanel" class="tab-pane active" id="tar">
+                                    {{ form(TransForm) }}
+                                </div>
+                                <div role="tabpanel" class="tab-pane" id="research">
+                                    dsfds
+                                </div>
+                                <div role="tabpanel" class="tab-pane" id="tipe">
+                                    dsfsdfsdf
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+{% endblock %}

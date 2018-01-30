@@ -1,0 +1,11 @@
+services:
+#    chart.example:
+#        class: chartBundle\Example
+#        arguments: ["@service_id", "plain_value", "%parameter%"]
+
+     chart.lineChart:
+         class: chartBundle\Service\lineChart
+         arguments: [ "@templating"]
+     chart.lineMultiChart:
+          class: chartBundle\Service\lineMultiChart
+          arguments: [ "@templating"]

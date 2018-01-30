@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="{{ asset('css/bootstrap.css') }}" />
+    <link rel="stylesheet" href="{{ asset('fonts/sahel/sahel.css') }}" />
+    <link rel="stylesheet" href="{{ asset('css/normalize.css') }}" />
+    <link rel="stylesheet" href="{{ asset('css/main.css') }}" />
+    <link rel="stylesheet" href="{{ asset('css/dateBundle/jquery.Bootstrap-PersianDateTimePicker.css') }}" />
+    <script src="{{ asset('js/chartbundle/chartjs.min.js') }}"></script>
+
+    <title>تز - {% block title %}{% endblock %}</title>
+    {% block stylesheets %}{% endblock %}
+    <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
+</head>
+<body>
+{% block pageBody %}{%  endblock %}
+
+{% block javascripts %}{% endblock %}
+<script src="{{ asset('js/jquery.min.js') }}"></script>
+<script src="{{ asset('js/bootstrap.min.js') }}"></script>
+<script src="{{ asset('js/dateBundle/jalaali.js') }}"></script>
+<script src="{{ asset('js/dateBundle/jquery.Bootstrap-PersianDateTimePicker.js') }}"></script>
+</body>
+</html>

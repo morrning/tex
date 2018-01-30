@@ -1,0 +1,39 @@
+{% extends 'BaseWithDefaultNav.html.twig' %}
+{% block title %}مدیریت سامانه - {% block adminTitle %}{% endblock %}{% endblock %}
+
+{% block upMenu %}
+<div class="btn-group">
+    <a href="{{ path('adminDashboard') }}" class="btn btn-primary">
+        <span class="glyphicon glyphicon-unchecked"></span>
+        صفحه اصلی مدیریت سامانه
+    </a>
+    <a href="{{ path('adminGroups') }}" class="btn btn-primary">
+        <span class="glyphicon glyphicon-tree-deciduous"></span>
+        گروه ها
+    </a>
+    <a href="{{ path('adminUserList',{'page':1}) }}" class="btn btn-primary">
+        <span class="glyphicon glyphicon-user"></span>
+        کاربران
+    </a>
+    <a href="{{ path('adminRollsView',{'bossID': '0' }) }}" class="btn btn-primary">
+        <span class="glyphicon glyphicon-download-alt"></span>
+        چارت سازمانی
+    </a>
+    <a href="{{ path('adminRollsView',{'bossID': '0' }) }}" class="btn btn-primary">
+        <span class="glyphicon glyphicon-warning-sign"></span>
+        دپارتمان‌ها
+    </a>
+    <a href="{{ path('adminUserList',{'page':1}) }}" class="btn btn-primary">
+        <span class="glyphicon glyphicon-lock"></span>
+        دسترسی ها
+    </a>
+    <a href="{{ path('adminSettings') }}" class="btn btn-primary">
+        <span class="glyphicon glyphicon-wrench"></span>
+         تنظیمات سیستم
+    </a>
+    <a href="{{ path('AdminLogsAll',{'page':1}) }}" class="btn btn-primary">
+        <span class="glyphicon glyphicon-list-alt"></span>
+تاریخچه وقایع
+    </a>
+</div>
+{% endblock %}

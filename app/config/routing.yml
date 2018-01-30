@@ -1,0 +1,28 @@
+grid:
+    resource: "@gridBundle/Controller/"
+    type:     annotation
+    prefix:   /
+
+entity_manager:
+    resource: "@entityManagerBundle/Controller/"
+    type:     annotation
+    prefix:   /
+
+admin:
+    resource: "@AdminBundle/Controller/"
+    type:     annotation
+    prefix:   /
+
+date:
+    resource: "@DateBundle/Controller/"
+    type:     annotation
+    prefix:   /
+
+user:
+    resource: "@UserBundle/Controller/"
+    type:     annotation
+    prefix:   /
+
+app:
+    resource: '@AppBundle/Controller/'
+    type: annotation

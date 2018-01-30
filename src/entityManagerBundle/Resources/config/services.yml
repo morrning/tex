@@ -1,0 +1,14 @@
+services:
+#    entity_manager.example:
+#        class: entityManagerBundle\Example
+#        arguments: ["@service_id", "plain_value", "%parameter%"]
+
+  entityMgr.add:
+      class: entityManagerBundle\Service\addSimple
+      arguments: [ "@doctrine.orm.entity_manager","@kernel","@form.factory"]
+  entityMgr.listSimple:
+      class: entityManagerBundle\Service\listSimple
+      arguments: [ "@doctrine.orm.entity_manager","@kernel","@grid.onePage"]
+  entityMgr.mgr:
+        class: entityManagerBundle\Service\mgr
+        arguments: [ "@doctrine.orm.entity_manager"]

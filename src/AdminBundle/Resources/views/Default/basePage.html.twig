@@ -1,0 +1,31 @@
+{% extends 'AdminBundle:Default:baseWithMenu.html.twig' %}
+
+{% block body %}
+    <div class="container-fluid">
+        <div class="row" >
+            <div class="col-md-3">
+
+                <div class="panel panel-info">
+                    <div class="panel-heading">اطلاعیه ها</div>
+                    <div class="panel-body">
+                        <ul>
+
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-9">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        {% block adminTitle %}{% endblock %}
+                    </div>
+                    <div class="panel-body">
+                        {% block adminContent %}{% endblock %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}
+

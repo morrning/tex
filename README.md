@@ -1,2 +1,2 @@
-# tex
-tex translation package
+# rahkarBase
+rahkar is base of cmf

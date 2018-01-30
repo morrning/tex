@@ -1,0 +1,6 @@
+services:
+#    date.example:
+#        class: DateBundle\Example
+#        arguments: ["@service_id", "plain_value", "%parameter%"]
+  dateBundle.jdate:
+        class: DateBundle\Service\Date
