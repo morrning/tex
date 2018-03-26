@@ -1,0 +1,25 @@
+{% extends 'AdminBundle:blog:basePanel.html.twig' %}
+{% block AppPageTitle %}وبکده{% endblock %}
+{% block AppPageBody %}
+    <div class="container">
+        <div class="row well well-sm">
+            {% for post in posts %}
+                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                    <h3 class="text-primary">{{ post.post.title }}</h3>
+                    <div class="label label-info">
+                        ارسال شده توسط
+                        {{ post.submitter }}
+                        در
+                        {{ jdateService.jdate('Y/m/d',post.post.dateSubmit) }}
+                    </div>
+                </div>
+                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" style="padding-top: 10px;">
+                    {{ post.post.body | raw}}
+                    <br>
+                    <a class="btn btn-link" href="{{ path('blogPost',{'id':post.post.SID}) }}">مشاهده مطلب</a>
+                </div>
+                    <hr>
+                {% endfor %}
+        </div>
+    </div>
+{% endblock %}

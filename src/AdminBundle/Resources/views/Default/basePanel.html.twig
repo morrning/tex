@@ -1,0 +1,149 @@
+{% extends 'EmptyPage.html.twig' %}
+{% block title %}{% block AppPageTitle %}{% endblock %}{% endblock %}
+{% block pageBody %}
+    <style>
+        body{
+            background-color: #a6a6a6;
+        }
+    </style>
+<div class="container" style="padding-top: 20px">
+    <div class="row" style="margin-top: -10px; padding-bottom: 6px;">
+        <div class="btn-group">
+            <a href="{{ path('adminDashboard') }}" class="btn btn-primary">
+                <span class="glyphicon glyphicon-unchecked"></span>
+                داشبورد مدیریت
+            </a>
+            <a href="{{ path('adminListUsers') }}" class="btn btn-primary">
+                <span class="glyphicon glyphicon-unchecked"></span>
+                کاربران
+            </a>
+            <a href="{{ path('adminListGroups') }}" class="btn btn-primary">
+                <span class="glyphicon glyphicon-unchecked"></span>
+                گروه‌ها
+            </a>
+            <div class="btn-group">
+                <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
+                    <span class="glyphicon glyphicon-unchecked"></span>
+                    وبلاگ
+                    <span class="caret"></span>
+                </button>
+                <ul class="dropdown-menu" role="menu">
+                    <li>
+                        <a href="{{ path('adminNewBlogPost') }}">
+                            <span class="glyphicon glyphicon-plus"></span>
+                            پست جدید
+                        </a>
+                    </li>
+                    <li>
+                        <a href="{{ path('adminListBlogPost',{'page':1}) }}">
+                            <span class="glyphicon glyphicon-list"></span>
+                            پست‌ها
+                        </a>
+                    </li>
+                    <li>
+                        <a href="{{ path('home') }}">
+                            <span class="glyphicon glyphicon-user"></span>
+                            دیدگاه‌ها
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="btn-group">
+                <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
+                    <span class="glyphicon glyphicon-unchecked"></span>
+                    مالی و حسابداری
+                    <span class="caret"></span>
+                </button>
+                <ul class="dropdown-menu" role="menu">
+                    <li>
+                        <a href="{{ path('home') }}">
+                            <span class="glyphicon glyphicon-plus"></span>
+                            پست جدید
+                        </a>
+                    </li>
+                    <li>
+                        <a href="{{ path('adminListBlogPost',{'page':1}) }}">
+                            <span class="glyphicon glyphicon-list"></span>
+                            پست‌ها
+                        </a>
+                    </li>
+                    <li>
+                        <a href="{{ path('home') }}">
+                            <span class="glyphicon glyphicon-user"></span>
+                            دیدگاه‌ها
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <a href="{{ path('adminlistQuestions',{'page':1}) }}" class="btn btn-primary">
+                <span class="glyphicon glyphicon-unchecked"></span>
+                پشتیبانی
+            </a>
+            <a href="{{ path('adminListAllOeders') }}" class="btn btn-primary">
+                <span class="glyphicon glyphicon-unchecked"></span>
+                سفارشات ترجمه
+            </a>
+            <div class="btn-group">
+                <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
+                    <span class="glyphicon glyphicon-unchecked"></span>
+                    تنظیمات
+                    <span class="caret"></span>
+                </button>
+                <ul class="dropdown-menu" role="menu">
+                    <li>
+                        <a href="{{ path('adminPaymentGateways') }}">
+                            <span class="glyphicon glyphicon-list"></span>
+                            درگاه‌های پرداخت
+                        </a>
+                    </li>
+                    <li>
+                        <a href="{{ path('adminSettings') }}">
+                            <span class="glyphicon glyphicon-list"></span>
+                            تنظیمات سیستم
+                        </a>
+                    </li>
+                    <li>
+                        <a href="{{ path('adminLangsSettings') }}">
+                            <span class="glyphicon glyphicon-list"></span>
+                            تنظیمات زبان‌های ترجمه
+                        </a>
+                    </li>
+                    <li>
+                        <a href="{{ path('adminFieldSettings') }}">
+                            <span class="glyphicon glyphicon-list"></span>
+                            تنظیمات رشته‌های فعالیت
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <a href="{{ path('home') }}" class="btn btn-primary">
+                <span class="glyphicon glyphicon-eye-open"></span>
+                مشاهده وب‌سایت
+            </a>
+        </div>
+    </div>
+</div>
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="panel panel-primary">
+                <div class="panel-heading">
+                    <div class="panel-title">
+                        {{ block('AppPageTitle') }}
+                    </div>
+                </div>
+                <div class="panel-body">
+                    <div class="row">
+                        <div class="col-xs-12">
+                            {% block AppPageBody %}{% endblock %}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+    {% endblock %}

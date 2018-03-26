@@ -1,0 +1,7 @@
+entity:
+      name: "AppBundle:Field"
+items:
+
+    fieldName:
+        title: "زمینه ترجمه"
+        type: "TextType"

@@ -1,0 +1,25 @@
+entity:
+      name: "AppBundle:userOrder"
+items:
+    title:
+        title: "موضوع"
+        type: "TextType"
+    lang:
+        title: "زبان مبدا و مقصد"
+        type: "choiceType.entity"
+        entity: "AppBundle:transLang"
+        colTitle: "transName"
+        colValue: "transName"
+
+    dateTahvil:
+        title: "تاریخ تحویل سفارش"
+        type: "jdateType"
+    state:
+        title: "وضعیت"
+        type: "TextType"
+        default: "defined"
+    dateSubmit:
+        title: "تاریخ ثبت"
+        type: "hidden"
+        viewType: "jdateType"
+        default: "defined"

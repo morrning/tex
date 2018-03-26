@@ -1,0 +1,14 @@
+entity:
+      name: "AppBundle:personalDic"
+items:
+
+    sourceWord:
+        title: "واژه"
+        type: "TextType"
+    transWord:
+        title: "ترجمه"
+        type: "TextType"
+    userID:
+        title: "hidden"
+        type: "hidden"
+        default: "defined"

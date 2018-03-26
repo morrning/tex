@@ -1,0 +1,27 @@
+{% extends 'AppBundle:user:basePanel.html.twig' %}
+{% block AppPageTitle %}سوال جدید{% endblock %}
+{% block AppPageBody %}
+
+    {{ form_start(form) }}
+    <div class="row">
+        <div class="col-xs-12 col-md-12 col-sm-12">
+            {{ form_label(form.title) }}
+            {{ form_widget(form.title) }}
+        </div>
+        <div class="col-xs-12 col-md-12 col-sm-12">
+            {{ form_label(form.des) }}
+            {{ form_widget(form.des) }}
+        </div>
+    </div>
+    <br>
+
+    <div class="row">
+        <div class="col-xs-3 col-md-3 col-sm-3">
+            {{ form_widget(form.save) }}
+        </div>
+        <div class="col-xs-4 col-md-4 col-sm-4">
+            <a href="{{ path('home') }}" class="btn btn-default">انصراف</a>
+        </div>
+    </div>
+    {{ form_end(form) }}
+{% endblock %}

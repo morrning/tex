@@ -1,61 +1,59 @@
-
-code {
-    font-size: 80%;
+
+code {
+    font-size: 80%;
+}
+
+li{
+    text-align: right;
+}
+.navbar-right{
+    float: left !important;
+}
+
+.col-centered{
+    float: none;
+    margin: 0 auto;
+}
+body{
+    font-family: "Sahel","tahoma";
+    background-color: #ecf0f1;
+    padding-bottom: 50px;
+
+}
+.control-label {
+    font-family: "Sahel","tahoma";
+}
+h1,h2,h3,p,.btn,table, .navbar-brand, th,textarea, input{
+    font-family:"Sahel","tahoma";
+    font-stretch: normal;
+    font-weight: normal;
+}
+.navbar-brand
+{
+}
+.btn-group{
+    float: right !important;
+}
+
+th{
+    float: none;
+    margin: 0 auto;
+    text-align: center;
+}
+.navbar-right li{
+    color: #ecf0f1 !important;
+}
+.img-center {
+    margin: 0 auto;
+}
+.row-button{
+    padding-top: 10px;
+}
+.navbar-brand{
+    font-family: "Sahel";
+    color: white;
+
+}
+.mainbody{
+    padding-top: 10px;
 }
-
-li{
-    text-align: right;
-}
-.navbar-right{
-    float: left !important;
-}
-
-.col-centered{
-    float: none;
-    margin: 0 auto;
-}
-body{
-    font-family: "Sahel","tahoma";
-    background-color: #ecf0f1;
-    padding-bottom: 50px;
-
-}
-.control-label {
-    font-family: "Sahel","tahoma";
-}
-h1,h2,h3,p,.btn,table, .navbar-brand, th,textarea, input{
-    font-family:"Sahel","tahoma";
-    font-stretch: normal;
-    font-weight: normal;
-}
-.navbar-brand
-{
-}
-.btn-group{
-    float: right !important;
-}
-
-th{
-    float: none;
-    margin: 0 auto;
-    text-align: center;
-}
-.navbar-right li{
-    color: #ecf0f1 !important;
-}
-.img-center {
-    margin: 0 auto;
-}
-.row-button{
-    padding-top: 10px;
-}
-.navbar-brand{
-    font-family: "Sahel";
-    color: white;
-
-}
-.mainbody{
-    padding-top: 10px;
-}
-
-body { background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABoAAAAaCAYAAACpSkzOAAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAALEgAACxIB0t1+/AAAABZ0RVh0Q3JlYXRpb24gVGltZQAxMC8yOS8xMiKqq3kAAAAcdEVYdFNvZnR3YXJlAEFkb2JlIEZpcmV3b3JrcyBDUzVxteM2AAABHklEQVRIib2Vyw6EIAxFW5idr///Qx9sfG3pLEyJ3tAwi5EmBqRo7vHawiEEERHS6x7MTMxMVv6+z3tPMUYSkfTM/R0fEaG2bbMv+Gc4nZzn+dN4HAcREa3r+hi3bcuu68jLskhVIlW073tWaYlQ9+F9IpqmSfq+fwskhdO/AwmUTJXrOuaRQNeRkOd5lq7rXmS5InmERKoER/QMvUAPlZDHcZRhGN4CSeGY+aHMqgcks5RrHv/eeh455x5KrMq2yHQdibDO6ncG/KZWL7M8xDyS1/MIO0NJqdULLS81X6/X6aR0nqBSJcPeZnlZrzN477NKURn2Nus8sjzmEII0TfMiyxUuxphVWjpJkbx0btUnshRihVv70Bv8ItXq6Asoi/ZiCbU6YgAAAABJRU5ErkJggg==);}

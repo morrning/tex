@@ -18,11 +18,27 @@ use Symfony\Component\Form\FormError;
 
 class DefaultController extends Controller
 {
+    public function generateRandomString($length = 16, $characters = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ')
+    {
+        $charactersLength = strlen($characters);
+        $randomString = '';
+        for ($i = 0; $i < $length; $i++) {
+            $randomString .= $characters[rand(0, $charactersLength - 1)];
+        }
+        return $randomString;
+    }
+
     /**
      * @Route("/", name="home")
      */
     public function home(Request $request)
     {
+        if($this->get('user.mgr')->isLogedIn())
+        {
+            if ($this->get('user.mgr')->ThisUserHasPermission('TranslatorAccess'))
+                return $this->redirectToRoute('transDashboard');
+            return $this->redirectToRoute('userDashboard');
+        }
         return $this->render('AppBundle:Default:index.html.twig');
     }
 
@@ -33,32 +49,299 @@ class DefaultController extends Controller
     {
         if($this->get('user.mgr')->isLogedIn())
         {
-            $transForm = $this->createFormBuilder()
-                ->add('username', TextType::class,array('label'=>"نام کاربری:",'attr'=>array('class' => 'input-sm'),'data' => ''))
-                ->add('password', PasswordType::class,array('label'=>"کلمه عبور:",'attr'=>array('class' => 'input-sm'),'data' => ''))
-                ->add('repassword', PasswordType::class,array('label'=>"تکرار کلمه عبور:",'attr'=>array('class' => 'input-sm'),'data' => ''))
-                ->add('email', EmailType::class,array('label'=>"پست الکترونیکی:",'attr'=>array('class' => 'input-sm'),'data' => ''))
-                ->add('nameUser', TextType::class,array('label'=>"نام و نام‌خانوادگی:",'attr'=>array('class' => 'input-sm'),'data' => ''))
-                ->add('company', TextType::class,array('label'=>"شرکت:",'required'=>false,'attr'=>array('class' => 'input-sm'),'data' => ''))
-                ->add('tel', TextType::class,array('label'=>"تلفن ثابت:",'required'=>false,'attr'=>array('class' => 'input-sm'),'data' => ''))
-                ->add('mobile', TextType::class,array('label'=>"تلفن همراه:",'attr'=>array('class' => 'input-sm'),'data' => ''))
-                ->add('field', TextType::class,array('label'=>"رشته تحصیلی:",'required'=>false,'attr'=>array('class' => 'input-sm'),'data' => ''))
-                ->add('save', SubmitType::class, array('label' => 'عضویت','attr'=>array('class' => 'btn-md btn-primary')))
-                ->getForm();
-            $transForm->handleRequest($request);
-            if($transForm->isSubmitted() && $transForm->isValid()) {
+            $form = $this->get('entityMgr.add')->render('AppBundle:order.yml',
+                [
+                    'submitter'=>$this->get('user.mgr')->getThisUserInfo()->getId(),
+                    'dateSubmit'=>time(),
+                    'state'=>'ثبت سفارش اولیه'
+                ]
+            );
 
-                $this->get('twig')->addGlobal('alerts', [['type' => 'success', 'message' => 'صورت وضعیت جدید با موفقیت اضافه شد.']]);
+            $form->handleRequest($request);
 
+            if($form->isSubmitted() && $form->isValid())
+            {
+                $this->get('entityMgr.add')->submit('AppBundle:order.yml',$form);
+                return $this->redirectToRoute('successOrder');
             }
+
 
             return $this->render('AppBundle:Default:submitOrder.html.twig',
                 [
-                    'TransForm'=>$transForm->createView()
+                    'TransForm'=>$form->createView()
                 ]
             );
         }
         return $this->redirectToRoute('userRegister');
+
+    }
+
+    /**
+     * @Route("/order/submit/success", name="successOrder")
+     */
+    public function successOrder()
+    {
+        if (!$this->get('user.mgr')->IsLogedIn())
+            return $this->redirectToRoute('userLogin');
+        return $this->render('AppBundle:Default:successOrderSubmit.html.twig');
+    }
+    /**
+     * @Route("/orderslist", name="listOrder")
+     */
+    public function listOrder()
+    {
+        if (!$this->get('user.mgr')->IsLogedIn())
+            return $this->redirectToRoute('userLogin');
+
+        $grid = $this->get('entityMgr.listSimple')->render(
+            'AppBundle:listOrders.yml',
+            null,
+            null,
+            null,
+            null,
+            ['submitter'=>$this->get('user.mgr')->getThisUserInfo()->getId()]
+        );
+        return $this->render('AppBundle:user:listOrder.html.twig',
+            [
+                'grid'=>$grid
+            ]
+        );
+
+    }
+
+    /**
+     * @Route("/user/dashboard", name="userDashboard")
+     */
+    public function userDashboard()
+    {
+        if (!$this->get('user.mgr')->IsLogedIn())
+            return $this->redirectToRoute('userLogin');
+
+        if ($this->get('user.mgr')->ThisUserHasPermission('TranslatorAccess'))
+            return $this->redirectToRoute('transDashboard');
+
+        return $this->render('AppBundle:user:userDashboard.html.twig',
+            [
+                'user'=>$this->get('user.mgr')->getThisUserInfo()
+            ]
+        );
+
+
+    }
+
+    /**
+     * @Route("/user/personaldictionaray", name="userPersonalDictionaray")
+     */
+    public function userPersonalDictionaray(Request $request)
+    {
+        if (!$this->get('user.mgr')->IsLogedIn())
+            return $this->redirectToRoute('userLogin');
+
+
+        $form = $this->get('entityMgr.add')->render('AppBundle:persoanlDic.yml',
+            [
+                'userID'=>$this->get('user.mgr')->getThisUserInfo()->getId()
+            ]
+        );
+
+        $form->handleRequest($request);
+
+        if($form->isSubmitted() && $form->isValid())
+        {
+            $this->get('entityMgr.add')->submit('AppBundle:persoanlDic.yml',$form);
+            return $this->redirectToRoute('userPersonalDictionaray');
+        }
+        $grid = $this->get('entityMgr.listSimple')->render(
+            'AppBundle:persoanlDic.yml',
+            null,
+            null,
+            'userPersonalDictionarayDeleteItem',
+            null,
+            ['userID'=>$this->get('user.mgr')->getThisUserInfo()->getId()]
+        );
+        return $this->render('AppBundle:user:persoanlDic.html.twig',
+            [
+                'grid'=>$grid,
+                'form'=>$form->createView()
+            ]
+        );
+    }
+
+    /**
+     * @Route("/user/deletepersonaldictionaray/{id}", name="userPersonalDictionarayDeleteItem")
+     */
+    public function userPersonalDictionarayDeleteItem($id)
+    {
+        if (!$this->get('user.mgr')->IsLogedIn())
+            return $this->redirectToRoute('userLogin');
+        if(! $this->get('entityMgr.mgr')->existById('AppBundle:personalDic', $id))
+            return $this->redirectToRoute('404');
+        if(! $this->get('entityMgr.mgr')->existByParams('AppBundle:personalDic',
+            [
+                'id'=>$id,
+                'userID'=>$this->get('user.mgr')->getThisUserInfo()->getId()
+            ]
+            ,
+            $id))
+            return $this->redirectToRoute('503');
+        $this->get('entityMgr.mgr')->deleteById('AppBundle:personalDic', $id);
+        return $this->redirectToRoute('userPersonalDictionaray');
+
+    }
+
+    /**
+     * @Route("/user/new/ques", name="userSubmitNewQuestion")
+     */
+    public function userSubmitNewQuestion(Request $request)
+    {
+        if (!$this->get('user.mgr')->IsLogedIn())
+            return $this->redirectToRoute('userLogin');
+        $form = $this->get('entityMgr.add')->render('AppBundle:qes.yml',
+            [
+                'userID'=>$this->get('user.mgr')->getThisUserInfo()->getId(),
+                'dateSubmit'=>time(),
+                'guid'=>$this->generateRandomString(32),
+                'isStarter'=>true
+            ]
+        );
+
+        $form->handleRequest($request);
+
+        if($form->isSubmitted() && $form->isValid())
+        {
+            $id = $this->get('entityMgr.add')->submit('AppBundle:qes.yml',$form);
+            $qus = $this->get('entityMgr.mgr')->getById('AppBundle:qes',$id);
+            return $this->redirectToRoute('userViewQues',['guid'=>$qus->getGuid()]);
+        }
+        return $this->render('AppBundle:user:submitQes.html.twig',
+            [
+                'form'=>$form->createView()
+            ]
+        );
+    }
+
+    /**
+     * @Route("/user/list/ques/{type}/{page}", name="userlistQuestions")
+     */
+    public function userlistQuestions($type,$page)
+    {
+        if (!$this->get('user.mgr')->IsLogedIn())
+            return $this->redirectToRoute('userLogin');
+        if($type != 'all')
+            return $this->redirectToRoute('404');
+        $em = $this->getDoctrine()->getManager();
+        $res = $em->getRepository('AppBundle:qes')->findBy(
+            [
+                'isStarter'=>true,
+                'userID'=>$this->get('user.mgr')->getThisUserInfo()->getId()
+            ],
+            [
+                'dateSubmit'=>'DESC'
+            ]
+        );
+        foreach ($res as $re)
+        {
+            $re->setUserID($this->get('entityMgr.mgr')->getById('UserBundle:User',$re->getUserID())->getFullName());
+        }
+        return $this->render('AppBundle:user:listQes.html.twig',
+            [
+               'res'=>$res
+            ]
+        );
+    }
+
+    /**
+     * @Route("/user/view/ques/{guid}", name="userViewQues")
+     */
+    public function userViewQues(Request $request,$guid)
+    {
+        if (!$this->get('user.mgr')->IsLogedIn())
+            return $this->redirectToRoute('userLogin');
+        if(!$this->get('entityMgr.mgr')->existByParams('AppBundle:qes',['guid'=>$guid]))
+            return $this->redirectToRoute('404');
+        if(
+            $this->get('entityMgr.mgr')->select('AppBundle:qes',['guid'=>$guid,'isStarter'=>true])[0]->getUserID()
+        == $this->get('user.mgr')->getThisUserInfo()->getId()
+        )
+        {
+            $formView = null;
+            if ($this->get('user.mgr')->IsLogedIn())
+            {
+                $form = $this->get('entityMgr.add')->render('AppBundle:replayQes.yml',
+                    [
+                        'userID'=>$this->get('user.mgr')->getThisUserInfo()->getId(),
+                        'dateSubmit'=>time(),
+                        'guid'=>$guid,
+                        'isStarter'=>0,
+                        'title'=>null
+                    ]
+                );
+                $form->handleRequest($request);
+
+                if($form->isSubmitted() && $form->isValid())
+                {
+                    $this->get('entityMgr.add')->submit('AppBundle:replayQes.yml',$form);
+                    return $this->redirectToRoute('userViewQues',['guid'=>$guid]);
+                }
+                $formView = $form->createView();
+            }
+
+            $res = $this->get('entityMgr.mgr')->select('AppBundle:qes',['guid'=>$guid,'isStarter'=>false],['id'=>'DESC']);
+            $starter = $this->get('entityMgr.mgr')->select('AppBundle:qes',['guid'=>$guid,'isStarter'=>true])[0];
+            $starter->setUserID($this->get('entityMgr.mgr')->getById('UserBundle:User',$starter->getUserID())->getFullName());
+
+
+            foreach ($res as $re)
+            {
+                $re->setUserID($this->get('entityMgr.mgr')->getById('UserBundle:User',$re->getUserID())->getFullName());
+            }
+
+
+            return $this->render('AppBundle:user:viewQes.html.twig',
+                [
+                    'res'=>$res,
+                    'starter'=>$starter,
+                    'form'=>$formView
+                ]
+            );
+        }
+        return $this->redirectToRoute('401');
+
+    }
+
+    /**
+     * @Route("/pages/{name}", name="showStaticPages")
+     */
+    public function showStaticPages($name)
+    {
+        $settings = $this->get('entityMgr.mgr')->getById('AdminBundle:setting',1);
+        $title = "";
+        $body = "";
+        if($name == 'about')
+        {
+            $title = "درباره ما";
+            $body = $settings->getAbout();
+        }
+        elseif($name == 'term')
+        {
+            $title = "شرایط و قوانین ارائه خدمات";
+            $body = $settings->getTerms();
+        }
+        elseif($name == 'connect')
+        {
+            $title = "تماس با ما";
+            $body = $settings->getConnectUs();
+        }
+        else{
+            return $this->redirectToRoute('404');
+        }
+
+        return $this->render('AppBundle:Default:StaticPage.html.twig',
+            [
+                'titleContent'=>$title,
+                'content'=>$body
+            ]
+        );
 
     }
 

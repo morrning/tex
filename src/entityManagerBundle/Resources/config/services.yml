@@ -2,7 +2,9 @@ services:
 #    entity_manager.example:
 #        class: entityManagerBundle\Example
 #        arguments: ["@service_id", "plain_value", "%parameter%"]
-
+  entityMgr.edit:
+      class: entityManagerBundle\Service\editSimple
+      arguments: [ "@doctrine.orm.entity_manager","@kernel","@form.factory"]
   entityMgr.add:
       class: entityManagerBundle\Service\addSimple
       arguments: [ "@doctrine.orm.entity_manager","@kernel","@form.factory"]

@@ -1,0 +1,16 @@
+entity:
+      name: "paymentBundle:gateways"
+items:
+
+    gname:
+        title: "نام درگاه"
+        type: "TextType"
+    publicKey:
+        title: "کلید عمومی"
+        type: "TextType"
+    privateKey:
+        title: "کلید خصوصی"
+        type: "TextType"
+    des:
+        title: "توضیحات"
+        type: "CKEditorType"

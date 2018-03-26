@@ -1,0 +1,7 @@
+entity:
+      name: "UserBundle:User"
+items:
+
+    username:
+        title: "نام کاربری"
+        type: "TextType"

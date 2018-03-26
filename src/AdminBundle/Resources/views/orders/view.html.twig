@@ -1,0 +1,117 @@
+{% extends 'AdminBundle:Default:basePanel.html.twig' %}
+{% block AppPageTitle %}
+    مشاهده سفارش:
+    {{ order.title }}
+{% endblock %}
+{% block AppPageBody %}
+    <div class="panel panel-info">
+        <div class="panel-heading">
+            <div class="panel-title">
+                اطلاعات مشتری
+            </div>
+        </div>
+        <div class="panel-body">
+            <div class="row">
+                <div class="col-md-3">
+                    نام و نام‌خانوادگی:
+                    {{ user.fullName }}
+                </div>
+                <div class="col-md-3">
+                    تلفن:
+                    {{ user.tel }}
+                </div>
+                <div class="col-md-3">
+                    موبایل:
+                    {{ user.mobile }}
+                </div>
+                <div class="col-md-3">
+                    ایمیل:
+                    {{ user.email }}
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="panel panel-info">
+        <div class="panel-heading">
+            <div class="panel-title">
+                اطلاعات سفارش
+            </div>
+        </div>
+        <div class="panel-body">
+            <div class="row">
+
+                <div class="col-md-6">عنوان
+                    عنوان:
+                    {{ order.state }}
+                </div>
+
+            </div>
+            <hr>
+            <div class="row">
+                <div class="col-md-3">
+                    شماره سفارش:
+                    {{ order.id }}
+                </div>
+                <div class="col-md-3">
+                    وضعیت:
+                    {{ order.state }}
+                </div>
+                <div class="col-md-3">
+                    زمینه:
+                    {{ order.field }}
+                </div>
+                <div class="col-md-3">
+                    زبان ترجمه:
+                    {{ order.lang }}
+                </div>
+            </div>
+            <hr>
+            <div class="row">
+                <div class="col-md-3">
+                    تاریخ تحویل:
+                    {{ order.dateTahvil }}
+                </div>
+                <div class="col-md-3">
+                    ترجمه جداول:
+                    {{ order.tableTrans }}
+                </div>
+                <div class="col-md-3">
+                    ترجمه زیر‌جدول‌ها:
+                    {{ order.underTableTrans }}
+                </div>
+                <div class="col-md-3">
+                    ترجمه مطالب داخل تصویر:
+                    {{ order.inImageTrans }}
+                </div>
+            </div>
+            <hr>
+            <div class="row">
+                <div class="col-md-12">
+                    توضیحات مشتری:
+                    {{ order.des }}
+                </div>
+            </div>
+            <hr>
+        </div>
+    </div>
+    <div class="panel panel-info">
+        <div class="panel-heading">
+            <div class="panel-title">
+                فایل‌های الصاقی
+            </div>
+        </div>
+    </div>
+    <div class="panel panel-info">
+        <div class="panel-heading">
+            <div class="panel-title">
+                صورت حساب‌ها
+            </div>
+        </div>
+        <div class="panel-body">
+
+        </div>
+    </div>
+    <div class="well well-sm">
+        sss
+    </div>
+{% endblock %}

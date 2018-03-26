@@ -1,0 +1,14 @@
+{% extends 'AdminBundle:Default:basePanel.html.twig' %}
+{% block AppPageTitle %}محتواهای اخیر{% endblock %}
+{% block AppPageBody %}
+    {{ grid |raw}}
+
+    <div class="row alert alert-info">
+        <div class="col-xs-4 col-md-4 col-sm-4">
+            <a href="{{ path('adminNewBlogPost') }}" class="btn btn-success">
+                <span class="glyphicon glyphicon-plus-sign"></span>
+                افزودن محتوای جدبد
+            </a>
+        </div>
+    </div>
+{% endblock %}

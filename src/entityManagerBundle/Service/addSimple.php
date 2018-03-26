@@ -90,6 +90,17 @@ class addSimple
                 $form->add($key,ChoiceType::class,['label'=>$item['title'],'choices'=>$col]);
 
             }
+            elseif ($item['type'] == 'choiceType.array')
+            {
+                $items = explode(',',$item['values']);
+                $orgiItems =[];
+                foreach ($items as $it)
+                {
+                    $orgiItems[$it]=$it;
+                }
+                $form->add($key,ChoiceType::class,['label'=>$item['title'],'choices'=>$orgiItems]);
+
+            }
         }
         $form->add('save', SubmitType::class, array('label' => 'ثبت','attr'=>array('class' => 'btn-md btn-primary')));
         return $form->getForm();

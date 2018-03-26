@@ -1,22 +1,35 @@
-{% extends 'AdminBundle:Default:basePage.html.twig' %}
+{% extends 'AdminBundle:Default:basePanel.html.twig' %}
+{% block AppPageTitle %}لیست کاربران گروه{% endblock %}
+{% block AppPageBody %}
+    <div class="container">
+        <div class="well well-sm">
+            <div class="alert alert-info">
+                جهت افزودن کاربر به این گروه نام کاربری را وارد کنید.
+            </div>
+            {{ form_start(form) }}
+            <div class="row">
+                <div class="col-xs-12 col-md-12 col-sm-12">
+                    {{ form_label(form.term) }}
+                    {{ form_widget(form.term) }}
+                </div>
+                <div class="col-xs-12 col-md-12 col-sm-12">
+                    {{ form_label(form.connect) }}
+                    {{ form_widget(form.connect) }}
+                </div>
+                <div class="col-xs-12 col-md-12 col-sm-12">
+                    {{ form_label(form.about) }}
+                    {{ form_widget(form.about) }}
+                </div>
+            </div>
+            <br>
 
-{% block adminTitle %}تنظیمات پایه سیستم{% endblock %}
-{% block adminContent %}
-    {{ form_start(form) }}
-    <div class="row">
-        <div class="col-md-12">
-            {{ form_label(form.sysmsg) }}
-            {{ form_widget(form.sysmsg) }}
+            <div class="row">
+                <div class="col-xs-3 col-md-3 col-sm-3">
+                    {{ form_widget(form.save) }}
+                </div>
+            </div>
+            {{ form_end(form) }}
         </div>
+
     </div>
-    <hr>
-    <div class="row">
-        <div class="col-md-2">
-            {{ form_widget(form.save) }}
-        </div>
-        <div class="col-md-10">
-            <a class="btn btn-default" href="{{ path('adminDashboard') }}">انصراف</a>
-        </div>
-    </div>
-    {{ form_end(form) }}
 {% endblock %}

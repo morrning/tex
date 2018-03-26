@@ -1,0 +1,55 @@
+{% extends 'base.html.twig' %}
+{% block title %}سوالات اخیر{% endblock %}
+{% block body %}
+    <div class="panel panel-primary">
+        <div class="panel-heading">
+            <div class="panel-title">
+                سوالات اخیر در تز
+            </div>
+        </div>
+        <div class="panel-body">
+            <table class="table table-responsive text-center">
+                <thead>
+                <tr>
+                    <th>ردیف</th>
+                    <th>کاربر</th>
+                    <th>عنوان</th>
+                    <th>تاریخ</th>
+                    <th>مشاهده</th>
+                </tr>
+                </thead>
+                <tbody>
+                {% for re in res %}
+                <tr>
+                    <td>{{ loop.index }}</td>
+                    <td>{{ re.userID }}</td>
+                    <td>{{ re.title }}</td>
+                    <td>{{ jdateService.jdate('Y/m/d',re.dateSubmit) }}</td>
+                    <td>
+                        <a class="btn btn-success" href="{{ path('userViewQues',{'guid':re.guid}) }}">
+                            مشاهده
+                            <span class="glyphicon glyphicon-arrow-left"></span>
+                        </a>
+                    </td>
+                    {% endfor %}
+                </tbody>
+            </table>
+
+            <div class="row">
+                <div class="col-xs-6">
+                    <a class="btn btn-default" style="float:right;">
+                        <span class="glyphicon glyphicon-arrow-right"></span>
+                        بعدی
+                    </a>
+                </div>
+                <div class="col-xs-6">
+                    <a class="btn btn-default" style="float: left">
+                        قبلی
+                        <span class="glyphicon glyphicon-arrow-left"></span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}

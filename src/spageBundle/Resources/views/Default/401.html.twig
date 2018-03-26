@@ -1,0 +1,15 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}
+    دسترسی مجاز نیست
+{% endblock %}
+
+{% block body %}
+<div class="container-fluid ">
+    <div class="row text-center ">
+        <img src="{{ asset('images/401.png') }}" class="img-responsive img-center">
+        <h1>شما اجازه دسترسی به این صفحه را ندارید.</h1>
+        <a class="btn btn-default" href="{{ path('home') }}"><span class="glyphicon glyphicon-home"></span> صفحه اصلی</a>
+    </div>
+</div>
+{% endblock %}

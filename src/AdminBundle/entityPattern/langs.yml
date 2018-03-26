@@ -1,0 +1,7 @@
+entity:
+      name: "AppBundle:transLang"
+items:
+
+    transName:
+        title: "زبان مبدا و مقصد"
+        type: "TextType"

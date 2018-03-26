@@ -1,0 +1,19 @@
+{% extends 'base.html.twig' %}
+{% block title %}{{ titleContent }}{% endblock %}
+{% block body %}
+    <div class="row">
+        <div class="col-md-12">
+            <div class="panel panel-success">
+                <div class="panel-heading">
+                    <div class="panel-title">
+                        {{ titleContent }}
+                    </div>
+                </div>
+                <div class="panel-body">
+                    {{ content | raw}}
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+

@@ -1,0 +1,21 @@
+{% extends 'AdminBundle:Default:basePanel.html.twig' %}
+{% block AppPageTitle %}مدیریت زبان‌های ترجمه{% endblock %}
+{% block AppPageBody %}
+{{ grid | raw }}
+    <hr>
+    <div class="alert alert-success">افزودن زبان جدید</div>
+    {{ form_start(form) }}
+    <div class="row">
+        <div class="col-xs-12 col-md-4 col-sm-4">
+            {{ form_label(form.transName) }}
+            {{ form_widget(form.transName) }}
+        </div>
+    </div>
+    <br>
+    <div class="row">
+        <div class="col-xs-3 col-md-3 col-sm-3">
+            {{ form_widget(form.save) }}
+        </div>
+    </div>
+    {{ form_end(form) }}
+{% endblock %}

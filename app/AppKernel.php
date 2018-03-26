@@ -23,6 +23,8 @@ class AppKernel extends Kernel
             new AdminBundle\AdminBundle(),
             new entityManagerBundle\entityManagerBundle(),
             new gridBundle\gridBundle(),
+            new spageBundle\spageBundle(),
+            new paymentBundle\paymentBundle(),
         ];
 
         if (in_array($this->getEnvironment(), ['dev', 'test'], true)) {

@@ -1,0 +1,20 @@
+{% extends 'AdminBundle:blog:basePanel.html.twig' %}
+{% block AppPageTitle %}{{ post.title }}{% endblock %}
+{% block AppPageBody %}
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                <h3 class="text-primary">{{ post.title }}</h3>
+                <div class="label label-info">
+                    ارسال شده توسط
+                    {{ submitter }}
+                     در
+                    {{ jdateService.jdate('Y/m/d',post.dateSubmit) }}
+                </div>
+            </div>
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" style="padding-top: 10px;">
+                {{ post.body | raw}}
+            </div>
+        </div>
+    </div>
+{% endblock %}

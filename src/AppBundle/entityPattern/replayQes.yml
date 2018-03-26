@@ -1,0 +1,27 @@
+entity:
+      name: "AppBundle:qes"
+items:
+
+    title:
+        title: "hidden"
+        type: "hidden"
+        default: "defined"
+    des:
+        title: "متن پاسخ"
+        type: "TextareaType"
+    userID:
+        title: "hidden"
+        type: "hidden"
+        default: "defined"
+    guid:
+        title: "hidden"
+        type: "hidden"
+        default: "defined"
+    dateSubmit:
+        title: "hidden"
+        type: "hidden"
+        default: "defined"
+    isStarter:
+        title: "hidden"
+        type: "hidden"
+        default: "defined"

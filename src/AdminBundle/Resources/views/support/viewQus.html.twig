@@ -1,0 +1,67 @@
+{% extends 'AdminBundle:Default:basePanel.html.twig' %}
+{% block AppPageTitle %}{{ starter.title }}{% endblock %}
+{% block AppPageBody %}
+    <div class="alert alert-info">
+        ارسال شده توسط
+        {{ starter.userID }}
+        در تاریخ
+        {{ jdateService.jdate('Y/m/d',starter.dateSubmit) }}
+    </div>
+    <br>
+    <p>متن:</p>
+    <p>{{ starter.des }}</p>
+
+    <hr>
+    {% set count = 0 %}
+    {% for re in res %}
+        {% set count = count + 1 %}
+    {% endfor %}
+
+    {% if count != 0 %}
+        <h3>پاسخ‌ها:</h3>
+
+        {% for re in res %}
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <div class="panel-title">
+                        ارسال شده توسط
+                        {{ re.userID }}
+                        در تاریخ
+                        {{ jdateService.jdate('Y/m/d',re.dateSubmit) }}
+                    </div>
+                </div>
+                <div class="panel-body">
+                    <p>{{ re.des | raw}}</p>
+                </div>
+            </div>
+            <hr>
+        {% endfor %}
+    {% endif %}
+
+    <h2>ارسال پاسخ</h2>
+    {% if userMgr.isLogedIn() == true %}
+        {{ form_start(form) }}
+        <div class="row">
+            <div class="col-xs-12 col-md-12 col-sm-12">
+                {{ form_label(form.des) }}
+                {{ form_widget(form.des) }}
+            </div>
+        </div>
+        <br>
+
+        <div class="row">
+            <div class="col-xs-3 col-md-3 col-sm-3">
+                {{ form_widget(form.save) }}
+            </div>
+            <div class="col-xs-4 col-md-4 col-sm-4">
+                <a href="{{ path('adminlistQuestions',{'page':1}) }}" class="btn btn-default">
+                    <span class="glyphicon glyphicon-backward"></span>
+                    بازگشت
+                </a>
+            </div>
+        </div>
+        {{ form_end(form) }}
+    {% endif %}
+
+
+{% endblock %}

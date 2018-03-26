@@ -1,0 +1,32 @@
+{% extends 'EmptyPage.html.twig' %}
+
+{% block title %}
+    license expired
+{% endblock %}
+
+{% block pageBody %}
+    <div class="container-fluid ">
+        <div class="row">
+            <div class="col-md-5 col-centered" style="padding-top: 10%">
+                <div class="row text-center ">
+                    <div class="panel panel-danger">
+                        <div class="panel-heading">
+                            <div class="panel-title">
+                                خطای مجوز نرم افزاری
+                            </div>
+                        </div>
+                        <div class="panel-body">
+                            <img src="{{ asset('images/le.png') }}" class="img-responsive img-center">
+                            <ul style="text-align: right; float: right; direction:rtl">
+                                <li>مجوز استفاده از نرم افزار به پایان رسیده است.</li>
+                                <li>مدیر شبکه محترم لطفا جهت ادامه استفاده از سامانه نسبت به خرید لایسنس جدید اقدام نمایید.</li>
+                                <li>تلفن پشتیبانی و فروش: ۰۹۱۸۳۲۸۲۴۰۵</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

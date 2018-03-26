@@ -1,0 +1,31 @@
+{% extends 'AppBundle:user:basePanel.html.twig' %}
+{% block AppPageTitle %}سوالات اخیر{% endblock %}
+{% block AppPageBody %}
+    <table class="table table-responsive text-center">
+        <thead>
+            <tr>
+                <th>ردیف</th>
+                <th>کاربر</th>
+                <th>عنوان</th>
+                <th>تاریخ</th>
+                <th>مشاهده</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for re in res %}
+            <tr>
+                <td>{{ loop.index }}</td>
+                <td>{{ re.userID }}</td>
+                <td>{{ re.title }}</td>
+                <td>{{ jdateService.jdate('Y/m/d',re.dateSubmit) }}</td>
+                <td>
+                    <a class="btn btn-success" href="{{ path('userViewQues',{'guid':re.guid}) }}">
+                        مشاهده
+                        <span class="glyphicon glyphicon-arrow-left"></span>
+                    </a>
+                </td>
+        {% endfor %}
+        </tbody>
+    </table>
+
+{% endblock %}

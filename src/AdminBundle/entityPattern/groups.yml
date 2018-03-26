@@ -1,0 +1,10 @@
+entity:
+      name: "UserBundle:UserGroup"
+items:
+
+    groupName:
+        title: "نام گروه"
+        type: "TextType"
+    des:
+        title: "توضیحات"
+        type: "TextType"

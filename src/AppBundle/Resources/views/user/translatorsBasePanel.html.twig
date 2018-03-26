@@ -1,0 +1,62 @@
+{% extends 'base.html.twig' %}
+{% block title %}{% block AppPageTitle %}{% endblock %}{% endblock %}
+{% block body %}
+<style>
+    body{
+        background-color: teal;
+    }
+</style>
+<div class="row">
+    <div class="col-md-3">
+        <div class="panel panel-info">
+            <div class="panel-heading">
+                <div class="panel-title">
+                    <span class="glyphicon glyphicon-usd"></span>
+                    موجودی حساب کاربری
+                </div>
+            </div>
+            <div class="panel-body">
+                0
+                ریال
+            </div>
+        </div>
+        <div class="panel panel-primary">
+            <div class="panel-heading">
+                <div class="panel-title">
+                    امکانات کاربری
+                </div>
+            </div>
+            <div class="panel-body">
+                <ul class="list-inline" style="padding-right: 0px;">
+                    <li><a class="btn btn-link" href="{{ path('home') }}"><span class="glyphicon glyphicon-user"></span> پروفایل کاربری </a></li>
+                    <li><a class="btn btn-link" href="{{ path('submitOrder') }}"><span class="glyphicon glyphicon-shopping-cart"></span> درخواست تسویه حساب</a></li>
+                    <li><a class="btn btn-link" href="{{ path('submitOrder') }}"><span class="glyphicon glyphicon-list"></span> آخرین ترجمه‌ها </a></li>
+                    <li><a class="btn btn-link" href="{{ path('listOrder') }}"><span class="glyphicon glyphicon-list"></span> سفارشات در دست اقدام </a></li>
+                    <li><a class="btn btn-link" href="{{ path('home') }}"><span class="glyphicon glyphicon-tags"></span> صورت حساب‌ها </a></li>
+                    <li><a class="btn btn-link" href="{{ path('userSubmitNewQuestion') }}"><span class="glyphicon glyphicon-question-sign"></span> درخواست جدید</a></li>
+                    <li><a class="btn btn-link" href="{{ path('userlistQuestions',{'type':'all','page':1}) }}"><span class="glyphicon glyphicon-th-list"></span> درخواست‌های پشتیبانی من </a></li>
+                    <li><a class="btn btn-link" href="{{ path('userPersonalDictionaray') }}"><span class="glyphicon glyphicon-book"></span> دیکشنری شخصی </a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-9">
+        <div class="panel panel-primary">
+            <div class="panel-heading">
+                <div class="panel-title">
+                    {{ block('AppPageTitle') }}
+                </div>
+            </div>
+            <div class="panel-body">
+                <div class="row">
+                    <div class="col-xs-12">
+                        {% block AppPageBody %}{% endblock %}
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+    {% endblock %}

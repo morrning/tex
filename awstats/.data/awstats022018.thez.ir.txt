@@ -1,0 +1,948 @@
+AWSTATS DATA FILE 7.5 (build 20160127)
+# If you remove this file, all statistics for date 201802 will be lost/reset.
+# Last config file used to build this data file was /home/thez/domains/thez.ir/awstats/.data/awstats.thez.ir.conf.
+
+# Position (offset in bytes) in this file for beginning of each section for
+# direct I/O access. If you made changes somewhere in this file, you should
+# also remove completely the MAP section (AWStats will rewrite it at next
+# update).
+BEGIN_MAP 30
+POS_GENERAL 2088                
+POS_TIME 2773                
+POS_VISITOR 32134               
+POS_DAY 39400               
+POS_DOMAIN 3701                
+POS_LOGIN 3934                
+POS_ROBOT 4089                
+POS_WORMS 5273                
+POS_EMAILSENDER 5404                
+POS_EMAILRECEIVER 5547                
+POS_SESSION 40142               
+POS_SIDER 40355               
+POS_FILETYPES 5682                
+POS_DOWNLOADS 5973                
+POS_OS 6041                
+POS_BROWSER 6360                
+POS_SCREENSIZE 8081                
+POS_UNKNOWNREFERER 8155                
+POS_UNKNOWNREFERERBROWSER 8563                
+POS_ORIGIN 8732                
+POS_SEREFERRALS 8872                
+POS_PAGEREFS 9027                
+POS_SEARCHWORDS 9288                
+POS_KEYWORDS 9450                
+POS_MISC 2435                
+POS_ERRORS 9519                
+POS_CLUSTER 3790                
+POS_SIDER_403 9662                
+POS_SIDER_400 9875                
+POS_SIDER_404 9957                
+END_MAP
+
+# LastLine    = Date of last record processed - Last record line number in last log - Last record offset in last log - Last record signature value
+# FirstTime   = Date of first visit for history file
+# LastTime    = Date of last visit for history file
+# LastUpdate  = Date of last update - Nb of parsed records - Nb of parsed old records - Nb of parsed new records - Nb of parsed corrupted - Nb of parsed dropped
+# TotalVisits = Number of visits
+# TotalUnique = Number of unique visitors
+# MonthHostsKnown   = Number of hosts known
+# MonthHostsUnKnown = Number of hosts unknown
+BEGIN_GENERAL 8
+LastLine 20180301000120 657 144452 17264519932154
+FirstTime 20180203003841
+LastTime 20180228154255
+LastUpdate 20180301001017 657 0 656 0 0
+TotalVisits 346                 
+TotalUnique 172                 
+MonthHostsKnown 0                   
+MonthHostsUnknown 185                 
+END_GENERAL
+
+# Misc ID - Pages - Hits - Bandwidth
+BEGIN_MISC 10
+QuickTimeSupport 0 0 0
+JavaEnabled 0 0 0
+JavascriptDisabled 0 0 0
+PDFSupport 0 0 0
+WindowsMediaPlayerSupport 0 0 0
+AddToFavourites 0 157 0
+RealPlayerSupport 0 0 0
+TotalMisc 0 0 0
+DirectorSupport 0 0 0
+FlashSupport 0 0 0
+END_MISC
+
+# Hour - Pages - Hits - Bandwidth - Not viewed Pages - Not viewed Hits - Not viewed Bandwidth
+BEGIN_TIME 24
+0 203 453 4500387 412 632 1784153
+1 179 355 3540420 382 556 1818334
+2 64 170 2038925 421 538 1706058
+3 75 192 2313907 329 515 1226446
+4 49 66 405896 368 561 1376810
+5 69 86 432786 436 627 2449502
+6 111 129 501088 522 761 2506839
+7 48 122 1230803 366 521 2648890
+8 66 104 845224 347 460 1175977
+9 23 72 885661 413 481 1203779
+10 76 116 837931 526 616 1510064
+11 58 105 875560 355 451 1263175
+12 59 127 1320300 324 444 1847080
+13 62 148 1537559 354 457 2305459
+14 106 136 760847 399 510 1090421
+15 116 163 924075 405 599 1446181
+16 33 74 915741 312 465 1193990
+17 111 186 1606528 398 545 1955807
+18 111 179 1296367 391 649 2758068
+19 84 85 672211 346 492 1302461
+20 80 140 1509777 1019 1209 2536185
+21 318 468 3686274 794 916 2042679
+22 90 164 1577363 673 775 1519077
+23 136 258 2433232 486 650 1914583
+END_TIME
+
+# Domain - Pages - Hits - Bandwidth
+# The 10 first Pages must be first (order not required for others)
+BEGIN_DOMAIN 1
+ip 2327 4098 36648862
+END_DOMAIN
+
+# Cluster ID - Pages - Hits - Bandwidth
+BEGIN_CLUSTER 0
+END_CLUSTER
+
+# Login - Pages - Hits - Bandwidth - Last visit
+# The 10 first Pages must be first (order not required for others)
+BEGIN_LOGIN 0
+END_LOGIN
+
+# Robot ID - Hits - Bandwidth - Last visit - Hits on robots.txt
+# The 10 first Hits must be first (order not required for others)
+BEGIN_ROBOT 28
+googlebot 1032 5566063 20180228230606 81
+bingbot 416 3014188 20180228212317 78
+yandex 168 892888 20180228070034 73
+bingpreview 143 6503464 20180227180805 0
+crawl 83 534263 20180227211723 4
+ahrefsbot 66 209610 20180228184553 32
+mj12bot 61 270720 20180228215738 33
+baiduspider 58 320454 20180228222010 0
+bot[\s_+:,\.\;\/\\-] 37 105618 20180228235219 31
+bubing 28 51436 20180228084751 9
+megaindex 13 44838 20180220133000 1
+no_user_agent 5 41968 20180220200742 0
+spider 1 2601 20180207172456 0
+googlebot\-image 6 88736 20180221233055 0
+seznambot 4 5826 20180221093928 2
+wotbox 13 45111 20180224094957 1
+mail\.ru 2 2946 20180206070238 1
+dotbot 1 363 20180210063513 1
+ips\-agent 12 132349 20180220184822 1
+unknown 17 7237 20180228131052 17
+filterdb\.iss\.net 2 11193 20180207132338 1
+google[_+\s]web[_+\s]preview 16 241111 20180205185931 0
+python 16 171737 20180222141452 0
+yie8 1 1883 20180221035532 0
+duckduckgo-favicons-bot 5 13390 20180212221230 0
+favicon 27 71291 20180227130414 0
+semrushbot 15 6513 20180227231651 15
+netcraft 2 25120 20180206104702 0
+END_ROBOT
+
+# Worm ID - Hits - Bandwidth - Last visit
+# The 5 first Hits must be first (order not required for others)
+BEGIN_WORMS 0
+END_WORMS
+
+# EMail - Hits - Bandwidth - Last visit
+# The 20 first Hits must be first (order not required for others)
+BEGIN_EMAILSENDER 0
+END_EMAILSENDER
+
+# EMail - Hits - Bandwidth - Last visit
+# The 20 first hits must be first (order not required for others)
+BEGIN_EMAILRECEIVER 0
+END_EMAILRECEIVER
+
+# Files type - Hits - Bandwidth - Bandwidth without compression - Bandwidth after compression
+BEGIN_FILETYPES 12
+eot 9 203361 0 0
+css 658 3093256 0 0
+png 225 1540204 0 0
+ttf 6 149268 0 0
+woff 232 5708442 0 0
+php 676 2397774 0 0
+html 2 762 0 0
+jpg 236 6121260 0 0
+js 646 13391095 0 0
+Unknown 1402 3986785 0 0
+gif 4 2301 0 0
+svg 2 54354 0 0
+END_FILETYPES
+
+# Downloads - Hits - Bandwidth
+BEGIN_DOWNLOADS 1
+/269677.txt 1 0 284
+END_DOWNLOADS
+
+# OS ID - Hits
+BEGIN_OS ID - Hits - Pages 19
+linuxsuse 1 1
+linuxandroid 484 126
+winlong 14 3
+macosx6 1 1
+winxp 91 46
+macosx11 32 6
+ios_iphone 3 3
+win2000 6 6
+winvista 1 1
+win2003 1 1
+unix 16 3
+winnt 9 8
+linux 643 163
+win7 435 197
+macosx 18 18
+macosx10 4 4
+win8.1 21 8
+Unknown 46 22
+win10 2272 1710
+END_OS
+
+# Browser ID - Hits - Pages
+BEGIN_BROWSER 83
+msie6.0 1 1
+firefox57.0 23 9
+chrome66.0.3349.0 16 3
+firefox45.68.21 1 1
+firefox26.0 3 3
+firefox2.0.0.15 4 0
+edge12 87 52
+msie11 1 1
+chrome58.0.3029.110 30 16
+firefox2.0.0.13 1 1
+msie8.0 63 22
+chrome64.0.3282.167 1252 954
+chrome37.0.2062.120 2 2
+firefox40.1 2 1
+chrome50.0.2661.102 16 3
+chrome66.0.3351.0 58 10
+chrome64.0.3282.137 65 21
+firefox42.0 1 1
+chrome37.0.2049.0 6 5
+chrome58.0.3029.83 16 3
+chrome66.0.3357.0 17 4
+chrome10.0.648.133 1 1
+chrome34.0.1847.131 1 1
+chrome64.0.3282.119 17 4
+chrome63.0.3239.132 539 394
+chrome62.0.3202.94 185 44
+firefox38.0 1 1
+firefox7.0.1 5 5
+opera49.0.2725.47 5 5
+firefox45.0 2 0
+firefox47.0 1 1
+mozilla 3 3
+chrome44.0.2403.89 1 1
+firefox43.1 5 5
+chrome64.0.3282.186 47 19
+edge14 17 4
+chrome66.0.3339.0 1 1
+chrome44.0.2403.133 16 3
+opera11.2.3.102637 13 3
+firefox36.0 1 1
+opera50.0.2762.42 16 3
+chrome66.0.3348.0 4 1
+safari 18 5
+chrome34.0.1847.76 1 1
+chrome41.0.2225.0 1 1
+android 17 4
+chrome55.0.2883.91 13 4
+chrome58.0.3029.81 16 3
+firefox52.0 122 77
+chrome56.0.2924.87 47 9
+chrome36.0.1985.125 13 3
+firefox31.0 3 2
+chrome66.0.3356.0 31 5
+chrome61.0.3163.100 26 26
+chrome51.0.2704.84 2 2
+msie9.0 28 13
+Unknown 8 8
+chrome66.0.3358.0 1 1
+firefox32.0 1 1
+chrome63.0.3239.111 45 18
+opera8.00 1 1
+chrome41.0.2272.118 48 9
+firefox58.0 259 72
+chrome41.0.2227.0 3 2
+chrome66.0.3341.0 13 1
+chrome8.0 1 1
+chrome59.0.3071.125 63 17
+firefox56.0 1 1
+chrome66.0.3347.0 38 5
+msie11.0 16 3
+chrome62.0.3202.84 48 9
+safari9.0 3 3
+firefox37.0 5 5
+msie10.0 4 3
+firefox51.0 7 7
+firefox3.5.9 1 1
+chrome61.0.3116.0 168 45
+chrome66.0.3343.0 1 1
+chrome66.0.3340.0 25 4
+firefox3.6.8 17 17
+chrome64.0.3282.140 405 318
+firefox55 19 5
+chrome66.0.3338.0 13 1
+END_BROWSER
+
+# Screen size - Hits
+BEGIN_SCREENSIZE 0
+END_SCREENSIZE
+
+# Unknown referer OS - Last visit date
+BEGIN_UNKNOWNREFERER 5
+Mozilla/5.0_(Android_7.0;_Mobile;_rv:57.0)_Gecko/57.0_Firefox/57.0 20180203004043
+Sitemap_Generator 20180219060016
+Mozilla/5.0_(compatible;_Google-Site-Verification/1.0) 20180215002537
+Visited_by_http://tools.geek-tools.org 20180228123550
+Mozilla/5.0_(Android_7.0;_Mobile;_rv:58.0)_Gecko/58.0_Firefox/58.0 20180203174057
+END_UNKNOWNREFERER
+
+# Unknown referer Browser - Last visit date
+BEGIN_UNKNOWNREFERERBROWSER 2
+Sitemap_Generator 20180219060016
+Visited_by_http://tools.geek-tools.org 20180228123550
+END_UNKNOWNREFERERBROWSER
+
+# Origin - Pages - Hits 
+BEGIN_ORIGIN 6
+From0 362 364
+From1 0 0
+From2 6 7
+From3 5 5
+From4 1954 3722
+From5 0 0
+END_ORIGIN
+
+# Search engine referers ID - Pages - Hits
+BEGIN_SEREFERRALS 1
+google 6 7
+END_SEREFERRALS
+
+# External page referers - Pages - Hits
+# The 10 first Pages must be first (order not required for others)
+BEGIN_PAGEREFS 3
+http://burger-imperia.com 2 2
+http://samandehi.ir/AdminPanel/DomainsCheck.aspx 2 2
+https://www.timer4web.com 1 1
+END_PAGEREFS
+
+# Search keyphrases - Number of search
+# The 10 first number of search must be first (order not required for others)
+BEGIN_SEARCHWORDS 1
+thez.ir 1
+END_SEARCHWORDS
+
+# Search keywords - Number of search
+# The 10 first number of search must be first (order not required for others)
+BEGIN_KEYWORDS 1
+thez.ir 1
+END_KEYWORDS
+
+# Errors - Hits - Bandwidth
+BEGIN_ERRORS 5
+403 8 1896
+302 616 346159
+500 13 6471
+301 1 459
+404 11382 22766718
+END_ERRORS
+
+# URL with 403 errors - Hits - Last URL referrer
+BEGIN_SIDER_403 7
+/index.php 1 -
+/ 1 http://whois.domaintools.com/thez.ir
+/robots.txt 1 -
+/.hg/hgrc 1 -
+/.git/config 1 -
+/.svn/wc.db 1 -
+/error/ 2 -
+END_SIDER_403
+
+# URL with 400 errors - Hits - Last URL referrer
+BEGIN_SIDER_400 0
+END_SIDER_400
+
+# URL with 404 errors - Hits - Last URL referrer
+BEGIN_SIDER_404 283
+/plugins/system/jsntplframework/assets/3rd-party/bootstrap/css/bootstrap-frontend.min.css 1 https://www.thez.ir/index.php/component/content/article
+/index.php/component/jdownloads/download/35-users-downloads/528-volume-13-perioperative-care 1 http://thez.ir/
+/images/kids-foods/best-foods/04-yogurt.jpg 1 http://thez.ir/
+/templates/jsn_boot_pro/css/custom.css 2 https://www.thez.ir/index.php/component/content/article
+/images/academy/mothers-health/mom-academy-03.jpg 1 http://thez.ir/
+/nursing-home/nursing-concepts/care-concept 1 http://thez.ir/
+/mom/modules/mod_je_caption/css/style.css 1 https://thez.ir/mom/index.php/breastfeeding/21-how-much-breast-milk
+/media/system/js/modal.js 2 https://www.thez.ir/index.php/management/login
+/index.php/component/tags/tag/119-self-esteem 1 http://thez.ir/
+/index.php/nursing-home/pediatric-nursing/150-pediatric/2458-chronic-lung-disease-of-infancy 1 -
+/index.php/12-java-functions 1 http://thez.ir/
+/index.php/component/jdownloads/download/5-article/35-top-ten-hair-food 1 http://thez.ir/
+/index.php/component/tags/tag/66-nursing-diagnosis 1 -
+/images/academy/mothers-health/mom-academy-07.jpg 1 http://thez.ir/
+/images/java/jv18-20.png 1 http://thez.ir/
+/plugins/system/jsntplframework/assets/joomlashine/js/utils.js 2 https://www.thez.ir/index.php/component/content/article
+/index.php/component/jdownloads/download/2-book/3-immunity-nursing 1 http://thez.ir/
+/index.php/component/jdownloads/download/35-users-downloads/510-gastrointestinal-nursing 1 http://thez.ir/
+/index.php/component/jdownloads/summary/2-book/3-immunity-nursing 1 http://thez.ir/
+/index.php/cerebral-aneurysm 1 -
+/images/java/cod3-1.png 1 http://www.thez.ir/
+/images/cars/best-cars-2016/best-cars-49.jpg 1 http://www.thez.ir/
+/images/academy/guinness-academy/82-world-biggest-cat.jpg 1 http://thez.ir/
+/index.php/component/jdownloads/summary/5-article/6-world-strength-speed 1 http://thez.ir/
+/images/java/cod2-2.png 1 http://www.thez.ir/
+/index.php/component/jdownloads/download/35-users-downloads/526-volume-11-fluids-and-electrolytes 1 http://thez.ir/
+/index.php/component/tags/tag/125-hypovolemia 1 http://thez.ir/
+/index.php/1-1-default-format 1 http://thez.ir/
+/index.php/component/jdownloads/summary/5-article/4-10-men-world-car 1 http://thez.ir/
+/images/academy/eyebrows/Make-Your-Eyebrows-Thicker-29.jpg 1 http://thez.ir/
+/mom/media/system/js/mootools-core.js 1 https://thez.ir/mom/index.php/breastfeeding/21-how-much-breast-milk
+/images/academy/mothers-health/mom-academy-04.jpg 1 http://thez.ir/
+/images/academy/Orange-Peel/00-Orange-thumb.jpg 1 http://thez.ir/
+/mom/media/system/js/core.js 1 https://thez.ir/mom/index.php/breastfeeding/21-how-much-breast-milk
+/plugins/system/pagebuilder/assets/3rd-party/bootstrap3/css/bootstrap.min.css 2 https://thez.ir/index.php/27-common-skin-problems/1990-wart-general
+/index.php/download-center/thesis-download 1 -
+/media/files/dasvirs/parastar-cfs-broch.pdf 1 http://thez.ir/
+/nursing-home/nursing-process/mental-health 1 http://thez.ir/
+/images/academy/eyebrows/Make-Your-Eyebrows-Thicker-16.jpg 1 http://thez.ir/
+/media/jui/css/bootstrap-responsive.min.css 1 https://www.thez.ir/index.php/diagnosing-and-treating-cough
+/index.php/living-with-cough 1 -
+/index.php/component/tags/tag/109-loss 1 http://thez.ir/
+/index.php/component/tags/tag/120-self-efficacy 1 http://thez.ir/
+/mom/media/jui/js/jquery-noconflict.js 1 https://thez.ir/mom/index.php/breastfeeding/21-how-much-breast-milk
+/index.php/component/jdownloads/summary/2-book/532-alzheimer-understanding-book 1 http://thez.ir/
+/index.php/component/jdownloads/summary/5-article/36-hair-15-food 1 http://thez.ir/
+/index.php/services/item/8 1 -
+/index.php/component/jdownloads/summary/5-article/12-25-diet-not-attempt 1 http://thez.ir/
+/mom/templates/protostar/css/custom.css 1 https://thez.ir/mom/index.php/breastfeeding/21-how-much-breast-milk
+/mom/media/plg_system_sl_scrolltotop/js/scrolltotop_mt.js 1 https://thez.ir/mom/index.php/breastfeeding/21-how-much-breast-milk
+/index.php/component/jdownloads/download/5-article/34-hair-food-needs 1 http://thez.ir/
+/index.php/2-4-export-html 1 http://thez.ir/
+/index.php/component/jdownloads/download/2-book/532-alzheimer-understanding-book 1 http://thez.ir/
+/management/login 1 -
+/wp-content/plugins/contact-form-7/includes/css/styles.css 1 https://thez.ir/contact/
+/templates/jsn_boot_pro/css/template.css 1 https://thez.ir/index.php/nursing-academies/child-nutrition-academy/174-childs-nutrition/1649-too-much-fruit-juice
+/index.php/component/tags/tag/105-nursing-research 1 http://thez.ir/
+/images/food/antioxidant-foods/antiox05.jpg 1 http://thez.ir/
+/modules/mod_sp_social/assets/css/financial-news/sp_social.css 1 https://www.thez.ir/index.php/super-car-2016/20-mini-cooper-dna
+/index.php/component/jdownloads/summary/2-book/1-cardiovascular-nursing 1 http://thez.ir/
+/index.php/syndrome-of-inappropriate-anti-diuretic-hormone-secretion 1 -
+/images/java/jv18-22.png 1 http://thez.ir/
+/mom/media/system/js/mootools-more.js 1 https://thez.ir/mom/index.php/breastfeeding/21-how-much-breast-milk
+/index.php/component/tags/tag/114-kids-mineral 1 http://thez.ir/
+/index.php/component/jdownloads/download/6-slide-powerpoint/9-50-slimming-food-show 1 http://thez.ir/
+/index.php/component/tags/tag/104-infographics 1 http://thez.ir/
+/index.php/1-3-variable-definition 1 http://thez.ir/
+/images/academy/eyebrows/Make-Your-Eyebrows-Thicker-27.jpg 1 http://thez.ir/
+/images/java/cod4-1.png 1 http://www.thez.ir/
+/images/java/cod2-4.png 1 http://www.thez.ir/
+/index.php/14-java-scope 1 http://thez.ir/
+/images/java/cod3-2.png 1 http://www.thez.ir/
+/images/java/jv18-10.png 1 http://thez.ir/
+/index.php/component/jdownloads/download/35-users-downloads/529-volume-14-women-health 1 http://thez.ir/
+/cache/jsn_boot_pro/5d40a42679b179a13a7ca5d7b8f3291e.js 1 https://www.thez.ir/index.php/eye-anatomy-pysiology/2499-aqueous-humor
+/images/academy/mothers-health/mom-academy-31.jpg 1 http://thez.ir/
+/images/java/jv17-13.png 1 http://www.thez.ir/
+/images/academy/mothers-health/mom-academy-12.jpg 1 http://thez.ir/
+/index.php/component/jdownloads/download/5-article/36-hair-15-food 1 http://thez.ir/
+/templates/tarj/js/scroll.js 1 https://www.thez.ir/index.php/super-car-2016/20-mini-cooper-dna
+/images/spss/sp6-2-3.png 1 http://thez.ir/
+/index.php/disseminated-intravascular-coagulation 2 -
+/images/academy/Shampoo/Homemade-Shampoo-Recipes-19.jpg 1 http://thez.ir/
+/index.php/component/tags/tag/10-nurse-leadership 1 http://thez.ir/
+/component/jdownloads/summary/23-forms-and-guidelines-19/309-yazd-form11 1 -
+/index.php/component/tags/tag/110-grieving 1 http://thez.ir/
+/images/academy/mothers-health/mom-academy-15.jpg 1 http://thez.ir/
+/images/academy/Shampoo/Homemade-Shampoo-Recipes-17.jpg 1 http://thez.ir/
+/media/system/js/core.js 2 https://www.thez.ir/index.php/component/content/article
+/images/academy/mothers-health/mom-academy-24.jpg 1 http://thez.ir/
+/index.php/services/coservices/web-development 1 -
+/wp-content/themes/thez/css/font-awesome.min.css 1 https://thez.ir/contact/
+/component/tags/tag/30 1 http://thez.ir/
+/images/academy/mothers-health/mom-academy-20.jpg 1 http://thez.ir/
+/human-body-guinness-records-articles/218-guinness-academy-animals/2367-78-tallest-donkey 1 -
+/plugins/system/pagebuilder/assets/3rd-party/bootstrap3/js/bootstrap.min.js 2 https://www.thez.ir/index.php/component/content/article
+/index.php/component/jdownloads/download/5-article/6-world-strength-speed 1 http://thez.ir/
+/index.php/human-body-guinness-records-articles/221-guinness-academy-strongest 1 -
+/index.php/component/jdownloads/summary/5-article/5-20-best-crossover-suv 1 http://thez.ir/
+/images/academy/eyebrows/Make-Your-Eyebrows-Thicker-09.jpg 1 http://thez.ir/
+/mom/modules/mod_je_quickcontact/js/modernizr.js 1 https://thez.ir/mom/index.php/breastfeeding/21-how-much-breast-milk
+/media/jui/js/jquery-noconflict.js 2 https://www.thez.ir/index.php/super-car-2016/20-mini-cooper-dna
+/index.php/16-java-strings 1 http://thez.ir/
+/index.php/component/tags/tag/126-hypervolemia 1 http://thez.ir/
+//submit/order 2 -
+/index.php/component/tags/tag/100-creativity 1 http://thez.ir/
+/index.php/component/jdownloads/summary/2-book/533-lewy-body-dementia-book 1 http://thez.ir/
+/plugins/system/pagebuilder/assets/css/pagebuilder.css 1 https://thez.ir/index.php/anaphylaxis
+/plugins/system/pagebuilder/assets/css/jsn-gui-frontend.css 1 https://thez.ir/index.php/anaphylaxis
+/index.php/component/jdownloads/download/6-slide-powerpoint/509-lazy-animals-record 1 http://thez.ir/
+/index.php/component/jdownloads/download/2-book/531-memory-problems 1 http://thez.ir/
+/index.php/rheumatic-heart-disease 1 http://thez.ir/
+/component/jdownloads/summary/13-forms-and-guidelines-9/121-gorgan-form-d8 1 -
+/images/cars/no-one-bought/bmc6.jpg 1 http://www.thez.ir/
+/index.php/10-critical-thinking 1 http://thez.ir/
+/index.php/12-team-building 1 http://thez.ir/
+/templates/system/css/system.css 1 https://thez.ir/index.php/nursing-academies/child-nutrition-academy/174-childs-nutrition/1649-too-much-fruit-juice
+/index.php/2-management-theories 1 http://thez.ir/
+/media/system/js/caption.js 2 https://www.thez.ir/index.php/component/content/article
+/images/jdownloads/screenshots/thumbnails/world-longest-eyelasht.jpg 1 http://thez.ir/
+/images/academy/mothers-health/mom-academy-14.jpg 1 http://thez.ir/
+/index.php/13-java-objects 1 http://thez.ir/
+/templates/jsn_boot_pro/css/colors/red.css 1 https://www.thez.ir/index.php/nursing-home/nursing-research/key-concepts-research/172-nursing-concepts/nursing-concepts-critical-thinking/1565-nursing-process-phase-one
+/index.php/component/jdownloads/download/5-article/4-10-men-world-car 1 http://thez.ir/
+/index.php/19-java-number-methods 1 http://thez.ir/
+/images/academy/mothers-health/mom-academy-23.jpg 1 http://thez.ir/
+/index.php/19-cultural-variations 1 http://thez.ir/
+/images/spss/sp30-4.png 1 http://thez.ir/
+/index.php/component/jdownloads/summary/6-slide-powerpoint/509-lazy-animals-record 1 http://thez.ir/
+/index.php/raynaud-disease 4 http://thez.ir/
+/mom/modules/mod_je_parallax/js/modernizr.custom.28468.js 1 https://thez.ir/mom/index.php/breastfeeding/21-how-much-breast-milk
+/media/jui/css/bootstrap.min.css 1 https://thez.ir/index.php/anaphylaxis
+/mom/templates/protostar/css/template.css 1 https://thez.ir/mom/index.php/breastfeeding/21-how-much-breast-milk
+/plugins/system/jsntplframework/assets/joomlashine/js/noconflict.js 2 https://www.thez.ir/index.php/component/content/article
+/plugins/system/jsntplframework/assets/3rd-party/bootstrap/css/bootstrap-responsive-frontend.min.css 2 https://www.thez.ir/index.php/component/content/article
+/index.php/component/jdownloads/download/2-book/533-lewy-body-dementia-book 1 http://thez.ir/
+/templates/jsn_boot_pro/js/jsn_template.js 1 https://www.thez.ir/index.php/component/content/article
+/index.php/contact-us/content-component/article-category-list/38-sample-sites 1 -
+/index.php/component/jdownloads/summary/6-slide-powerpoint/9-50-slimming-food-show 1 http://thez.ir/
+/index.php/kaposi-sarcoma 1 -
+/images/academy/mothers-health/mom-academy-25.jpg 1 http://thez.ir/
+/index.php/nursing-academies/child-nutrition-academy 1 -
+/cache/jsn_boot_pro/ca8c9984e277e5719a5d63ecfff7af97.js 1 https://www.thez.ir/index.php/management/login
+/contact-us/contact-component/contact-categories/35-shop-site/37-fruit-encyclopedia/38-a 1 -
+/mom/media/jui/js/jquery.min.js 1 https://thez.ir/mom/index.php/breastfeeding/21-how-much-breast-milk
+/index.php/component/jdownloads/download/35-users-downloads/511-endocrine-system 1 http://thez.ir/
+/index.php/component/tags/tag/106-qualitative-study 1 http://thez.ir/
+/index.php/10-operator-periority 1 http://thez.ir/
+/images/jdownloads/fileimages/Word.png 1 http://thez.ir/
+/images/kids-foods/best-foods/06-breakfast-cereal.jpg 1 http://thez.ir/
+/images/academy/Shampoo/Homemade-Shampoo-Recipes-24.jpg 1 http://thez.ir/
+/media/system/js/mootools-core.js 1 https://www.thez.ir/index.php/component/content/article
+/index.php/component/jdownloads/summary/2-book/13-muscloskeletal-system 1 http://thez.ir/
+/images/java/jv11-12.png 1 http://thez.ir/
+/index.php/component/jdownloads/summary/2-book/531-memory-problems 1 http://thez.ir/
+/images/academy/mothers-health/mom-academy-05.jpg 1 http://thez.ir/
+/images/spss/sp6-2-2.png 1 http://thez.ir/
+//orderslist 2 -
+/index.php/component/jdownloads/download/2-book/10-hematology-system 1 http://thez.ir/
+/index.php/component/tags/tag/101-clinical-judgment 1 http://thez.ir/
+/images/academy/mothers-health/mom-academy-16.jpg 1 http://thez.ir/
+/mom/modules/mod_je_quickcontact/css/modal.css 1 https://thez.ir/mom/index.php/breastfeeding/21-how-much-breast-milk
+/index.php/services/nursing-journal 1 -
+/images/np-mis/cyb-ico.png 1 http://thez.ir/
+/images/java/cod2-1.png 1 http://www.thez.ir/
+/index.php/component/jdownloads/download/35-users-downloads/527-volume-12-mental-health 1 http://thez.ir/
+/index.php/component/jdownloads/summary/2-book/2-respiratory-nursing 1 http://thez.ir/
+/media/system/css/modal.css 2 https://www.thez.ir/index.php/diagnosing-and-treating-cough
+/index.php/component/tags/tag/115-best-foods-for-kids 1 http://thez.ir/
+/images/java/cod3-3.png 1 http://www.thez.ir/
+/index.php/component/jdownloads/download/2-book/510-gastrointestinal-nursing 1 http://thez.ir/
+/images/food/antioxidant-foods/antiox06.jpg 1 http://thez.ir/
+/index.php/component/tags/tag/102-reflective-thinking 1 http://thez.ir/
+/images/jdownloads/catimages/folder.png 1 http://thez.ir/
+/majors/midwifery-major/ 1 -
+/images/academy/Shampoo/Homemade-Shampoo-Recipes-15.jpg 1 http://thez.ir/
+/media/jui/js/jquery-migrate.min.js 1 https://www.thez.ir/index.php/super-car-2016/48-ford-shelby-gt350
+/mom/media/system/js/caption.js 1 https://thez.ir/mom/index.php/breastfeeding/21-how-much-breast-milk
+/images/crossover-suv-20/co13.jpg 1 http://thez.ir/
+/index.php/component/jdownloads/download/6-slide-powerpoint/508-no-one-bought-cars 1 http://thez.ir/
+/images/academy/eyebrows/Make-Your-Eyebrows-Thicker-25.jpg 1 http://thez.ir/
+/media/jui/js/bootstrap.min.js 1 https://www.thez.ir/index.php/super-car-2016/48-ford-shelby-gt350
+/images/academy/mothers-health/mom-academy-02.jpg 1 http://thez.ir/
+/index.php/component/jdownloads/summary/2-book/10-hematology-system 1 http://thez.ir/
+/index.php/news/3-article-1-title 1 -
+/templates/jsn_boot_pro/css/jsn_rtl.css 1 https://thez.ir/index.php/nursing-academies/child-nutrition-academy/174-childs-nutrition/1649-too-much-fruit-juice
+/images/java/jv17-10.png 1 http://www.thez.ir/
+/cache/jsn_boot_pro/5a150f496aa9c414fac129b92332fc52.css 1 https://www.thez.ir/index.php/management/login
+/images/academy/mothers-health/mom-academy-13.jpg 1 http://thez.ir/
+/images/academy/eyebrows/Make-Your-Eyebrows-Thicker-18.jpg 1 http://thez.ir/
+/plugins/system/pagebuilder/assets/css/front_end.css 1 https://thez.ir/index.php/nursing-academies/child-nutrition-academy/174-childs-nutrition/1649-too-much-fruit-juice
+/index.php/component/tags/tag/123-acid-base 1 http://thez.ir/
+/images/java/cod3-4.png 1 http://www.thez.ir/
+/mom/modules/mod_je_parallax/js/jquery.cslider.js 1 https://thez.ir/mom/index.php/breastfeeding/21-how-much-breast-milk
+/images/java/jv17-11.png 1 http://www.thez.ir/
+/mom/modules/mod_je_parallax/css/style.css 1 https://thez.ir/mom/index.php/breastfeeding/21-how-much-breast-milk
+/services/nursing-journal/teaching-articles 1 http://thez.ir/
+/index.php/services/nursing-journal/teaching-articles/lab-sample-blog 1 -
+/index.php/component/jdownloads/download/2-book/2-respiratory-nursing 1 http://thez.ir/
+/images/academy/Shampoo/Homemade-Shampoo-Recipes-14.jpg 1 http://thez.ir/
+/images/java/cod4-5.png 1 http://www.thez.ir/
+/media/com_acymailing/js/acymailing_module.js 1 https://www.thez.ir/index.php/super-car-2016/20-mini-cooper-dna
+/images/java/cod1-2.png 1 http://www.thez.ir/
+/index.php/component/jdownloads/summary/5-article/33-ten-detox-water 1 http://thez.ir/
+/images/java/jv17-14.png 1 http://www.thez.ir/
+/images/academy/mothers-health/mom-academy-32.jpg 1 http://thez.ir/
+/images/kids-foods/best-foods/01-milk.jpg 1 http://thez.ir/
+/images/academy/mothers-health/mom-academy-33.jpg 1 http://thez.ir/
+/index.php/component/jdownloads/summary/5-article/7-35-world-records 1 http://thez.ir/
+/index.php/component/jdownloads/summary/5-article/8-50-slimming-food 1 http://thez.ir/
+/images/academy/eyebrows/Make-Your-Eyebrows-Thicker-26.jpg 1 http://thez.ir/
+/images/java/jv17-12.png 1 http://www.thez.ir/
+/component/jdownloads/send/22-forms-and-guidelines-18/282-rasht-form-09 1 -
+/images/academy/eyebrows/Make-Your-Eyebrows-Thicker-28.jpg 1 http://thez.ir/
+/components/com_imageshow/assets/css/style.css 2 https://www.thez.ir/index.php/component/content/article
+/index.php/component/tags/tag/111-death-dying 1 http://thez.ir/
+/index.php/component/tags/tag/118-self-concept 1 http://thez.ir/
+/index.php/component/tags/tag/107-quantitative-study 1 http://thez.ir/
+/mom/modules/mod_je_quickcontact/css/style.css 1 https://thez.ir/mom/index.php/breastfeeding/21-how-much-breast-milk
+/plugins/system/pagebuilder/assets/js/joomlashine.noconflict.js 1 https://www.thez.ir/index.php/component/content/article
+/media/system/js/mootools-more.js 1 https://www.thez.ir/index.php/component/content/article
+/index.php/15-patients-safety 1 http://thez.ir/
+/index.php/component/tags/tag/127-hyponatremia 1 http://thez.ir/
+/wp-content/plugins/wp-slimstat-ex/lib/ofc/php-ofc-library/ofc_upload_image.php 1 http://thez.ir/wp-content/plugins/wp-slimstat-ex/lib/ofc/php-ofc-library/ofc_upload_image.php
+/index.php/component/tags/tag/116-kids-vitamin-d 1 http://thez.ir/
+/mom/media/jui/js/jquery-migrate.min.js 1 https://thez.ir/mom/index.php/breastfeeding/21-how-much-breast-milk
+/index.php/component/content/article 1 -
+/images/java/jv19-10.png 1 http://thez.ir/
+/index.php/component/jdownloads/download/5-article/33-ten-detox-water 1 http://thez.ir/
+/index.php/component/jdownloads/summary/2-book/11-hematology-system-2 1 http://thez.ir/
+/nursing-home/nursing-concepts/hope-concept 1 http://thez.ir/
+/plugins/system/pagebuilder/assets/css/front_end_responsive.css 1 https://thez.ir/index.php/nursing-academies/child-nutrition-academy/174-childs-nutrition/1649-too-much-fruit-juice
+/index.php/component/jdownloads/summary/13-forms-and-guidelines-9/121-gorgan-form-d8 1 -
+/images/academy/eyebrows/Make-Your-Eyebrows-Thicker-07.jpg 1 http://thez.ir/
+/index.php/component/jdownloads/download/35-users-downloads/525-volume-10-integumentary-system 1 http://thez.ir/
+/images/spss/sp5-1-1.png 1 http://thez.ir/
+/images/java/jv11-10.png 1 http://thez.ir/
+/mom/templates/protostar/js/template.js 1 https://thez.ir/mom/index.php/breastfeeding/21-how-much-breast-milk
+/index.php/tricuspid-insufficiency 1 http://thez.ir/
+/templates/system/css/general.css 1 https://thez.ir/index.php/nursing-academies/child-nutrition-academy/174-childs-nutrition/1649-too-much-fruit-juice
+/images/kids-foods/best-foods/09-oatmeal.jpg 1 http://thez.ir/
+/images/academy/eyebrows/Make-Your-Eyebrows-Thicker-08.jpg 1 http://thez.ir/
+/index.php/1-2-custom-table 1 http://thez.ir/
+/index.php/4-2-variable-definitions 1 -
+/images/academy/eyebrows/Make-Your-Eyebrows-Thicker-17.jpg 1 http://thez.ir/
+/index.php/14-organizational-planning 1 http://thez.ir/
+/mom/media/jui/js/bootstrap.min.js 1 https://thez.ir/mom/index.php/breastfeeding/21-how-much-breast-milk
+/index.php/component/jdownloads/download/35-users-downloads/530-volume-15-pain-management 1 http://thez.ir/
+/images/java/jv11-11.png 1 http://thez.ir/
+/images/java/cod4-2.png 1 http://www.thez.ir/
+/cache/jsn_boot_pro/b9513469b908e4e1146e6cb118d79c7f.js 1 https://thez.ir/index.php/nursing-academies/fluids-electrolytes-academy
+/cache/jsn_boot_pro/409cf97ed160b0eac659d0c195611b54.js 1 https://www.thez.ir/index.php/management/login
+/index.php/tarjomac/download-center 2 http://thez.ir/
+/images/food/antioxidant-foods/antiox07.jpg 1 http://thez.ir/
+/media/coalawebtraffic/modules/traffic/counter-themes/globes/css/cw-visitors.css 1 https://www.thez.ir/index.php/super-car-2016/20-mini-cooper-dna
+/index.php/Meningitis 1 -
+/images/academy/Understanding-Triglycerides.jpg 1 http://thez.ir/
+/index.php/136-nursing-diagnosis/2097-disturbed-sleep-pattern 1 http://thez.ir/
+/images/academy/mothers-health/mom-academy-30.jpg 1 http://thez.ir/
+/images/java/jv18-21.png 1 http://thez.ir/
+/images/java/cod2-3.png 1 http://www.thez.ir/
+/index.php/1-5-data-summarize-show 1 -
+/images/crossover-suv-20/co1.jpg 1 http://thez.ir/
+/index.php/acid-base-imbalances-ch10 1 -
+/images/food/antioxidant-foods/antiox04.jpg 1 http://thez.ir/
+/images/academy/mothers-health/mom-academy-21.jpg 1 http://thez.ir/
+/index.php/baby-development-pictures 1 -
+/images/academy/mothers-health/mom-academy-22.jpg 1 http://thez.ir/
+/images/academy/guinness-academy/39-oldest-cat-living.jpg 1 http://thez.ir/
+/component/tags/tag/16-diagnostic-tests 1 http://thez.ir/
+/index.php/Hypovolemic-shock 1 -
+/images/jdownloads/screenshots/thumbnails/musceloskeletal-cover.jpg 1 http://thez.ir/
+/index.php/component/tags/tag/113-kids-vitamin 1 http://thez.ir/
+/index.php/component/jdownloads/download/5-article/8-50-slimming-food 1 http://thez.ir/
+/category/thez-services/%D9%85%D9%82%D8%A7%D9%84%D9%87/ 1 -
+/index.php/component/jdownloads/download/2-book/512-genitourinary-system 1 http://thez.ir/
+/images/academy/mothers-health/mom-academy-06.jpg 1 http://thez.ir/
+/wp-content/themes/atom/style.css 1 http://thez.ir/wp-content/themes/atom/style.css
+/index.php/ventricular-tachycardia 1 http://thez.ir/
+/index.php/component/jdownloads/summary/5-article/34-hair-food-needs 1 http://thez.ir/
+/images/academy/Shampoo/Homemade-Shampoo-Recipes-23.jpg 1 http://thez.ir/
+/images/food/antioxidant-foods/antiox08.jpg 1 http://thez.ir/
+/mom/media/jui/css/bootstrap-rtl.css 1 https://thez.ir/mom/index.php/breastfeeding/21-how-much-breast-milk
+END_SIDER_404
+
+# Host - Pages - Hits - Bandwidth - Last visit date - [Start date of last visit] - [Last page of last visit]
+# [Start date of last visit] and [Last page of last visit] are saved only if session is not finished
+# The 10 first Hits must be first (order not required for others)
+BEGIN_VISITOR 185
+2.185.150.221 1423 1831 9560682 20180228154255
+172.104.118.87 95 188 1870295 20180221033557
+117.28.250.42 49 49 501908 20180223194033
+172.104.116.118 46 69 469385 20180206154402
+172.105.225.7 32 34 83854 20180222164550
+146.185.223.202 30 30 384145 20180222193800
+94.74.128.133 27 56 592023 20180219124211
+172.104.101.111 21 21 57238 20180218011418
+172.104.110.103 20 21 53203 20180214000602
+5.216.93.244 20 92 1135565 20180206000600
+185.130.78.23 6 9 112682 20180225183918
+104.223.123.98 1 1 2556 20180203004610
+220.181.132.178 3 13 178927 20180212090120
+204.79.180.7 0 1 46875 
+185.46.8.135 1 1 221 20180205184008
+83.122.44.183 4 13 167432 20180220084251
+54.149.59.38 1 1 2678 20180212050522
+74.125.248.85 2 5 48953 20180205014700
+66.102.9.16 0 7 106469 
+35.184.213.20 1 13 157271 20180206074109
+35.224.110.36 1 10 131949 20180218184528
+66.249.83.77 3 10 197074 20180218015955
+172.104.125.108 9 9 19842 20180205005925
+66.249.81.43 5 12 235435 20180222201612
+204.79.180.17 1 1 2539 20180227075842
+172.104.111.104 6 8 14815 20180225012955
+130.211.142.83 3 16 243120 20180217225610
+209.141.46.108 1 1 2545 20180206003532
+181.214.169.83 1 1 2678 20180208015526
+204.187.14.74 4 17 245832 20180213135736
+66.249.92.141 0 6 46046 
+104.198.165.162 1 4 23517 20180214115343
+5.212.65.253 13 36 335429 20180207003508
+106.120.162.98 3 16 241973 20180212090126
+66.249.81.137 3 12 159630 20180218015955
+204.79.180.14 0 2 43600 
+5.121.79.214 4 17 243513 20180204021844
+178.252.152.67 14 21 289768 20180217075946
+66.102.9.13 2 3 27987 20180218035145
+35.184.105.222 1 1 2749 20180217214828
+172.105.232.50 2 2 4864 20180225233528
+213.147.128.34 3 16 201094 20180203145413
+204.187.14.71 12 51 734297 20180221025131
+178.253.4.200 4 17 243513 20180204182521
+91.227.68.154 3 3 11272 20180207055634
+35.192.133.104 3 16 241272 20180226153215
+185.144.156.188 8 22 386804 20180204160303
+185.113.57.244 1 6 60516 20180204112106
+204.187.14.73 16 66 915527 20180228123126
+66.249.84.13 1 5 100190 20180218035148
+94.24.98.171 3 16 241311 20180220112238
+204.79.180.22 0 1 2485 
+51.15.86.162 1 11 128500 20180203004151
+104.198.42.11 1 14 191120 20180225133812
+46.164.100.100 3 16 241273 20180228134221
+74.125.248.87 1 3 22619 20180228014212
+172.105.219.49 14 18 37022 20180208225619
+217.147.168.20 1 1 2483 20180224150604
+66.102.6.209 4 14 169999 20180218035148
+35.192.30.33 3 16 243118 20180216001705
+204.79.180.21 0 2 3723 
+106.120.161.66 1 1 10974 20180213054116
+66.249.82.154 5 14 178737 20180218035040
+89.234.157.254 8 22 271948 20180220080012
+5.117.92.78 3 16 241273 20180222031747
+144.76.80.151 1 1 10971 20180211093148
+35.184.121.64 1 1 2408 20180204051205
+52.12.82.13 1 1 2521 20180219075501
+204.187.14.75 8 34 488389 20180228123351
+5.216.244.191 3 16 243124 20180216071922
+66.249.81.45 2 14 159209 20180222201635
+66.249.83.75 0 1 1213 
+185.2.103.102 1 1 10340 20180204133834
+172.104.115.118 13 13 28821 20180205174925
+35.160.250.83 1 1 2539 20180223041313
+172.104.109.112 2 2 5113 20180212030514
+5.121.120.193 3 16 241314 20180220231951
+124.225.44.123 1 1 2539 20180224094955
+5.114.115.20 3 16 241896 20180207164022
+192.160.102.164 4 4 10431 20180210070234
+5.188.10.8 8 24 367244 20180218213602
+104.132.0.96 1 1 2601 20180207184806
+192.15.8.32 3 16 242322 20180211012622
+66.249.82.156 2 12 201036 20180218035039
+77.247.181.162 1 1 2622 20180210070226
+35.224.118.31 1 13 156482 20180203065324
+172.104.106.88 1 1 353 20180215002522
+66.102.8.9 2 8 96724 20180218015844
+86.49.188.134 2 2 22021 20180212043518
+104.154.172.68 1 1 2539 20180226062903
+91.121.70.58 1 1 11026 20180215030520
+109.86.72.210 1 1 2764 20180209121117
+5.123.93.207 4 18 256386 20180220212225
+37.237.152.51 11 44 547183 20180204000728
+204.79.180.9 0 1 694 
+199.10.31.194 4 17 245832 20180213140506
+204.79.180.16 0 1 17596 
+74.125.248.86 1 4 117710 20180205014700
+66.249.84.9 2 7 69010 20180218035152
+158.46.167.170 1 1 2749 20180214105925
+66.249.83.76 2 7 50333 20180218015958
+5.75.104.173 4 17 243717 20180203094037
+62.210.90.158 1 1 11082 20180215084005
+188.229.53.235 3 16 241311 20180218222229
+35.192.115.164 3 16 243119 20180213223348
+88.99.165.207 3 16 241273 20180224002146
+124.124.14.93 1 1 2446 20180205195730
+5.215.195.5 14 27 241840 20180207214602
+66.102.8.11 0 3 79841 
+144.76.5.234 5 19 266906 20180206085035
+172.104.107.106 3 3 7347 20180225190128
+95.167.178.45 1 1 2540 20180219234541
+185.130.78.24 5 8 99442 20180225183925
+188.165.192.220 1 1 2749 20180216025054
+46.209.210.226 8 13 74673 20180217075932
+5.212.114.176 5 8 13037 20180209115239
+89.234.68.90 6 6 59038 20180210230834
+94.72.104.249 1 1 10886 20180206081259
+54.183.130.127 6 6 32135 20180226083142
+199.87.154.255 4 4 8654 20180203004514
+204.79.180.19 0 2 10585 
+85.185.45.174 0 2 120274 
+185.35.63.119 1 1 11026 20180215224512
+94.23.83.80 2 2 5116 20180226071305
+66.102.6.211 2 11 124821 20180218035150
+66.102.8.13 1 5 66560 20180218015842
+220.181.132.193 3 13 178927 20180213054141
+23.92.53.215 8 22 386972 20180226201147
+35.192.9.242 1 12 132554 20180214023210
+79.167.18.22 0 1 25651 
+5.124.84.237 6 19 249377 20180208231252
+213.147.128.130 5 23 359456 20180213211753
+88.198.22.8 5 5 48163 20180211101736
+5.9.158.75 1 1 1734 20180219000522
+195.22.125.135 1 1 2622 20180210203234
+35.224.7.89 1 1 2539 20180227100600
+185.161.38.26 2 10 180939 20180204112106
+192.64.120.28 1 1 10244 20180223193835
+66.249.81.139 1 3 36738 20180218015953
+83.121.206.220 3 16 243120 20180217154857
+35.192.46.33 1 14 191154 20180219101402
+185.130.78.21 9 11 34970 20180226173745
+139.162.86.198 7 7 19197 20180218153317
+185.130.78.22 4 6 58307 20180226173743
+192.186.180.159 2 2 20376 20180228131053
+82.99.198.162 3 16 242332 20180208184131
+35.226.159.47 1 9 100192 20180205073313
+199.19.224.189 1 1 2693 20180218043807
+110.177.82.189 1 1 2539 20180224072606
+35.224.225.67 1 1 2749 20180217221953
+94.23.171.176 1 1 2749 20180214232545
+34.215.79.68 1 1 2601 20180206015748
+66.249.82.155 2 9 112388 20180218035036
+5.117.26.152 3 16 241311 20180219173522
+77.247.181.163 4 9 150853 20180203004358
+35.226.127.138 1 10 116060 20180214004332
+66.102.6.207 2 9 191824 20180205024109
+185.198.167.30 1 1 2539 20180224193901
+201.18.18.173 2 2 22021 20180213041846
+188.158.42.161 1 5 3233 20180224074332
+27.156.90.81 1 1 2539 20180223222144
+74.125.248.84 2 20 293098 20180228014215
+5.75.233.214 3 16 241321 20180221100817
+35.194.30.233 3 16 243120 20180218015851
+66.249.81.141 1 5 70464 20180218015952
+5.123.182.161 11 35 404034 20180203174057
+5.213.29.123 3 15 215623 20180222023946
+172.104.116.144 3 3 6486 20180225015148
+104.198.41.187 1 1 2539 20180228135539
+216.74.102.36 1 1 2539 20180225081123
+37.115.185.236 4 4 43084 20180221041929
+144.76.100.150 4 8 120754 20180228123550
+66.249.92.139 15 54 794597 20180218035247
+192.160.102.168 1 1 2622 20180209194550
+66.249.81.41 1 9 113597 20180222201549
+46.62.180.144 3 16 241283 20180226235602
+188.253.92.184 3 16 241632 20180226231843
+89.234.68.76 11 11 101126 20180223040612
+35.192.159.146 3 16 243122 20180217134457
+66.249.92.140 5 16 272062 20180218035236
+66.249.84.11 2 6 79422 20180218035148
+66.102.9.10 3 8 114535 20180218035147
+185.147.41.147 16 31 379907 20180225173912
+13.56.229.65 9 9 23014 20180226034403
+52.36.229.215 1 1 2408 20180205030411
+END_VISITOR
+
+# Date - Pages - Hits - Bandwidth - Visits
+BEGIN_DAY 26
+20180203 217 448 4560536 23
+20180204 122 200 1642089 16
+20180205 74 135 1198218 19
+20180206 96 202 1755404 11
+20180207 84 141 1053685 9
+20180208 45 89 766175 6
+20180209 48 53 182629 7
+20180210 91 115 730148 10
+20180211 118 158 1130338 11
+20180212 63 130 1236408 16
+20180213 64 156 1880611 16
+20180214 23 61 563222 9
+20180215 25 25 88735 9
+20180216 20 51 672497 9
+20180217 37 90 1064852 12
+20180218 244 521 5893844 32
+20180219 181 241 1235865 11
+20180220 125 261 2718792 12
+20180221 76 208 2604683 15
+20180222 100 142 1006482 15
+20180223 129 131 752161 12
+20180224 60 84 388937 15
+20180225 146 176 911750 17
+20180226 45 118 1357024 17
+20180227 22 36 180063 4
+20180228 72 126 1073714 13
+END_DAY
+
+# Session range - Number of visits
+BEGIN_SESSION 7
+1h+ 17
+5mn-15mn 14
+15mn-30mn 14
+2mn-5mn 14
+30s-2mn 24
+0s-30s 239
+30mn-1h 24
+END_SESSION
+
+# URL - Pages - Bandwidth - Entry - Exit
+# The 10 first Pages must be first (order not required for others)
+BEGIN_SIDER 51
+/ 675 2395197 284 181
+/user/dashboard 311 731620 3 6
+/user/login 194 553594 13 34
+/user/register 176 621250 16 31
+/fonts/sahel/Sahel.woff 119 3096313 9 16
+/fonts/glyphicons-halflings-regular.woff 113 2612129 10 45
+/admin/dashboard 85 205359 0 0
+/submit/order 81 281840 0 3
+/user/personaldictionaray 67 201351 0 2
+/orderslist 66 182241 1 4
+/admin/list/orders 26 74920 0 0
+/fonts/sahel/Sahel.eot 3 80937 0 1
+/googlecd87553948c2e942.html 2 762 2 2
+/order/submit/success 1 1974 0 0
+/blog/post/%D9%85%D8%AA%D8%BA%DB%8C%D8%B1_%D9%88_%D8%A7%D9%86%D9%88%D8%A7%D8%B9_%D9%85%D8%AA%D8%BA%DB%8C%D8%B1 2 12062 0 0
+/message/401 6 12041 0 1
+/blog/post/%D8%A7%D8%B3%D8%AA%D8%AE%D8%B1%D8%A7%D8%AC_%D9%85%D9%82%D8%A7%D9%84%D9%87:_%D9%81%D8%B1%D8%A2%DB%8C%D9%86%D8%AF_%D8%A7%D9%86%D8%AA%D8%B4%D8%A7%D8%B1 2 14620 0 0
+/admin/list/groups 27 78506 0 0
+/admin/edit/blogpost/18 1 8575 0 0
+/admin/list/users/group/5 3 8426 0 0
+/admin/list/ques/1 17 45597 0 0
+/blog/post/%DA%86%D8%A7%D9%82%DB%8C_%D8%A8%D8%A7_%D9%88%D9%82%D9%88%D8%B9_%DB%B1%DB%B1_%D9%86%D9%88%D8%B9_%D8%B3%D8%B1%D8%B7%D8%A7%D9%86_%D8%AF%D8%B1_%D8%A7%D8%B1%D8%AA%D8%A8%D8%A7%D8%B7_%D8%A7%D8%B3%D8%AA 1 3753 0 1
+/fonts/sahel/Sahel.ttf 2 53760 0 2
+/admin/list/users/group/6 7 21556 0 0
+/fonts/glyphicons-halflings-regular.ttf 4 95508 1 1
+/blog 28 109600 2 4
+/admin/list/users/group/1 4 12315 0 0
+/admin/view/ques/NOJMtcGFfwrH0KOxiqYaCsCOK4gCZqkk 4 12162 0 0
+/fonts/glyphicons-halflings-regular.eot 6 122424 0 1
+/admin/settings 24 84622 0 0
+/user/view/ques/ELza3K2ymIC2VNawD26KVbQYxa5KnQh2 6 18269 0 0
+http://thez.ir/ 1 2577 1 0
+/admin/list/users/group/3 8 24652 0 0
+/admin/new/blogpost 4 12091 0 0
+/admin/view/order/9 7 19696 0 0
+/user/view/ques/NckB4XCgPc566IC9ojNjqZrcgULcwHjj 4 11795 0 0
+/blog/post/%DB%B3%DB%B7_%D8%A7%D8%B4%D8%AA%D8%A8%D8%A7%D9%87_%D8%B1%D8%A7%DB%8C%D8%AC_%DA%AF%D8%B1%D8%A7%D9%85%D8%B1%DB%8C_%D8%AF%D8%B1_%D8%AA%D8%B1%D8%AC%D9%85%D9%87_%D9%87%D8%A7%DB%8C_%D9%81%D8%A7%D8%B1%D8%B3%DB%8C_%D8%A8%D9%87_%D8%A7%D9%86%DA%AF%D9%84%DB%8C%D8%B3%DB%8C 1 7727 0 0
+/pages/about 30 66591 2 3
+/admin/edit/blogpost/15 1 9050 0 0
+/admin/view/order/8 5 14087 0 0
+/admin/list/users 20 54966 0 0
+/user/new/ques 45 125546 0 0
+/pages/term 24 44084 0 4
+/admin/list/blogpost/1 15 47524 0 0
+/user/view/ques/NOJMtcGFfwrH0KOxiqYaCsCOK4gCZqkk 5 14930 0 0
+/user/list/ques/all/1 50 134180 0 0
+/user/public/list/ques/all/1 2 4848 0 0
+/admin/view/ques/K9v5jzmUSa55VnEJibUpeQpShlfCVlO4 5 15534 0 0
+/admin/list/users/group/4 3 9398 0 0
+/admin/view/order/7 6 17021 0 0
+/pages/connect 28 56812 2 4
+END_SIDER

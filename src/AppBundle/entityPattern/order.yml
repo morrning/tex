@@ -1,0 +1,49 @@
+entity:
+      name: "AppBundle:userOrder"
+items:
+    field:
+        title: "زمینه:"
+        type: "choiceType.entity"
+        entity: "AppBundle:Field"
+        colTitle: "fieldName"
+        colValue: "fieldName"
+    lang:
+        title: "زبان مبدا و مقصد:"
+        type: "choiceType.entity"
+        entity: "AppBundle:transLang"
+        colTitle: "transName"
+        colValue: "transName"
+    title:
+        title: "موضوع:"
+        type: "TextType"
+    dateTahvil:
+        title: "تاریخ تحویل سفارش:"
+        type: "jdateType"
+    des:
+        title: "توضیحات به مترجم:"
+        type: "TextareaType"
+    tableTrans:
+        title: "ترجمه جداول:"
+        type: "choiceType.array"
+        values: "خیر,بله"
+    underTableTrans:
+        title: "ترجمه زیر جدول‌ها:"
+        type: "choiceType.array"
+        values: "خیر,بله"
+    inImageTrans:
+        title: "ترجمه مطالب داخل تصاویر:"
+        type: "choiceType.array"
+        values: "خیر,بله"
+    submitter:
+        title: "hidden"
+        type: "hidden"
+        default: "defined"
+    state:
+        title: "hidden"
+        type: "hidden"
+        default: "defined"
+    dateSubmit:
+        title: "تاریخ ثبت"
+        type: "hidden"
+        viewType: "jdateType"
+        default: "defined"

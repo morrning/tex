@@ -1,0 +1,35 @@
+{% extends 'EmptyPage.html.twig' %}
+
+{% block title %}
+    عدم ارائه سرویس
+{% endblock %}
+
+{% block pageBody %}
+    <div class="container-fluid ">
+        <div class="row">
+            <div class="col-md-5 col-centered" style="padding-top: 2%">
+                <div class="row text-center ">
+                    <div class="panel panel-warning">
+                        <div class="panel-heading">
+                            <div class="panel-title">
+                                عدم ارائه سرویس
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-2">
+                                <img src="{{ asset('images/adminbundle/siteOffline.png') }}" class="img-responsive img-center">
+                            </div>
+                            <div class="col-md-10">
+                                <ul style="text-align: right; float: right; direction:rtl; padding-top: 30px">
+                                    <li>با عرض پوزش فعلا قادر به پاسخگویی نیستیم.لطفا تا پایان تعمیرات پورتال شکیبا باشید.</li>
+                                    <li>جهت دریافت اطلاعات بیشتر لطفا با مدیر سامانه تماس حاصل فرمایید.</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

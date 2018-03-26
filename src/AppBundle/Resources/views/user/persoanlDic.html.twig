@@ -1,0 +1,30 @@
+{% extends 'AppBundle:user:basePanel.html.twig' %}
+{% block AppPageTitle %}دیکشنری شخصی{% endblock %}
+{% block AppPageBody %}
+
+    {{ form_start(form) }}
+    <div class="row">
+        <div class="col-xs-12 col-md-6 col-sm-6">
+            {{ form_label(form.sourceWord) }}
+            {{ form_widget(form.sourceWord) }}
+        </div>
+        <div class="col-xs-12 col-md-6 col-sm-6">
+            {{ form_label(form.transWord) }}
+            {{ form_widget(form.transWord) }}
+        </div>
+    </div>
+    <br>
+
+    <div class="row">
+        <div class="col-xs-12 col-md-6 col-sm-6">
+            {{ form_widget(form.save) }}
+        </div>
+    </div>
+    {{ form_end(form) }}
+    <hr>
+    <div class="row">
+        <div class="col-md-12">
+            {{ grid | raw }}
+        </div>
+    </div>
+{% endblock %}

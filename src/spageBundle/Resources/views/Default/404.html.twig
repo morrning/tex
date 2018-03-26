@@ -1,0 +1,17 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}
+  404
+{% endblock %}
+
+{% block body %}
+    <div class="container-fluid ">
+        <div class="row text-center ">
+            <img src="{{ asset('images/404.png') }}" class="img-responsive img-center">
+            <div class="alert alert-danger">
+                <h3>صفحه مورد درخواست شما وجود ندارد یا در دسترس نیست.</h3>
+                <a class="btn btn-default" href="{{ path('home') }}"><span class="glyphicon glyphicon-home"></span> صفحه اصلی</a>
+            </div>
+        </div>
+    </div>
+{% endblock %}

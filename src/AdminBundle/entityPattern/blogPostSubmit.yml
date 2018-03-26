@@ -1,0 +1,27 @@
+entity:
+      name: "AppBundle:blogPost"
+items:
+
+    title:
+        title: "موضوع:"
+        type: "TextType"
+    body:
+        title: "متن"
+        type: "CKEditorType"
+    canComment:
+        title: "ارسال دیدگاه مجاز باشد؟"
+        type: "choiceType.array"
+        values: "خیر,بله"
+    submitter:
+        title: "hidden"
+        type: "hidden"
+        default: "defined"
+    SID:
+        title: "hidden"
+        type: "hidden"
+        default: "defined"
+    dateSubmit:
+        title: "تاریخ ثبت"
+        type: "hidden"
+        viewType: "jdateType"
+        default: "defined"

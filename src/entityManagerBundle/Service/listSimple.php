@@ -33,14 +33,13 @@ class listSimple
 
     }
 
-    public function render($EntityPattern,$btnView = null,$btnEdit=null,$btnDelete=null,$editParams=null,$filter=null,$btnGo=null)
+    public function render($EntityPattern,$btnView = null,$btnEdit=null,$btnDelete=null,$editParams=null,$filter=[],$btnGo=null,$order=null)
     {
+        if(is_null($filter))
+            $filter = [];
         $entityAdr = explode(':',$EntityPattern);
         $YamlForm = Yaml::parse(file_get_contents($this->AppFolder . '/src/' . $entityAdr[0]. '/entityPattern/' . $entityAdr[1]));
-        if(is_null($filter))
-            $result = $this->em->getRepository($YamlForm['entity']['name'])->findAll();
-        else
-            $result = $this->em->getRepository($YamlForm['entity']['name'])->findBy($filter);
+        $result = $this->em->getRepository($YamlForm['entity']['name'])->findBy($filter,['id'=>'DESC']);
         foreach ($result as $rowKey=>$row)
         {
             foreach($YamlForm['items'] as $key=>$item)

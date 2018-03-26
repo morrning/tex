@@ -1,55 +1,96 @@
-{% extends 'base.html.twig' %}
-{% block title %}ثبت سفارش{% endblock %}
-{% block body %}
-
-
+{% extends 'AppBundle:user:basePanel.html.twig' %}
+{% block AppPageTitle %}ثبت سفارش{% endblock %}
+{% block AppPageBody %}
     <div class="row">
-        <div class="col-md-8 col-centered">
-            <div class="panel panel-primary">
-                <div class="panel-heading">
-                    <div class="panel-title">
-                        ثبت سفارش
-                    </div>
-                </div>
-                <div class="panel-body">
-                    <div class="row">
-                        <div class="col-xs-12">
-                            <div class="alert alert-info">
-                                ابتدا نوع سفارش خود را تعیین کنید و سپس آیتم‌های سفارش را تکمیل نمایید.
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div>
-
-                            <!-- Nav tabs -->
-                            <ul class="nav nav-tabs" role="tablist">
-                                <li role="presentation" class="active"><a href="#tar" aria-controls="tar" role="tab" data-toggle="tab">سفارش ترجمه</a></li>
-                                <li role="presentation"><a href="#research" aria-controls="research" role="tab" data-toggle="tab">سفارش تحقیق</a></li>
-                                <li role="presentation"><a href="#tipe" aria-controls="tipe" role="tab" data-toggle="tab">سفارش تایپ</a></li>
-                            </ul>
-
-                            <!-- Tab panes -->
-                            <div class="tab-content">
-                                <div role="tabpanel" class="tab-pane active" id="tar">
-                                    {{ form(TransForm) }}
-                                </div>
-                                <div role="tabpanel" class="tab-pane" id="research">
-                                    dsfds
-                                </div>
-                                <div role="tabpanel" class="tab-pane" id="tipe">
-                                    dsfsdfsdf
-                                </div>
-                            </div>
-
-                        </div>
-                    </div>
-
-                </div>
+        <div class="col-xs-12">
+            <div class="alert alert-info">
+                ابتدا نوع سفارش خود را تعیین کنید و سپس آیتم‌های سفارش را تکمیل نمایید.
             </div>
         </div>
-
     </div>
+    <div class="row">
+        <div>
 
+            <!-- Nav tabs -->
+            <ul class="nav nav-tabs" role="tablist">
+                <li role="presentation" class="active"><a href="#tar" aria-controls="tar" role="tab" data-toggle="tab">سفارش ترجمه</a></li>
+                <li role="presentation"><a href="#research" aria-controls="research" role="tab" data-toggle="tab">سفارش تحقیق</a></li>
+            </ul>
 
+            <!-- Tab panes -->
+            <div class="tab-content">
+                <div role="tabpanel" class="tab-pane active" id="tar">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-12">
+                                {{ form_start(TransForm) }}
+                                <div class="row">
+                                    <div class="col-xs-12 col-md-4 col-sm-4">
+                                        {{ form_label(TransForm.field) }}
+                                        {{ form_widget(TransForm.field) }}
+                                    </div>
+                                    <div class="col-xs-12 col-md-4 col-sm-4">
+                                        {{ form_label(TransForm.lang) }}
+                                        {{ form_widget(TransForm.lang) }}
+                                    </div>
+                                    <div class="col-xs-12 col-md-4 col-sm-4">
+                                        {{ form_label(TransForm.dateTahvil) }}
+                                        {{ form_widget(TransForm.dateTahvil) }}
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-12">
+                                <div class="row">
+                                    <div class="col-xs-12 col-md-4 col-sm-4">
+                                        {{ form_label(TransForm.tableTrans) }}
+                                        {{ form_widget(TransForm.tableTrans) }}
+                                    </div>
+                                    <div class="col-xs-12 col-md-4 col-sm-4">
+                                        {{ form_label(TransForm.underTableTrans) }}
+                                        {{ form_widget(TransForm.underTableTrans) }}
+                                    </div>
+                                    <div class="col-xs-12 col-md-4 col-sm-4">
+                                        {{ form_label(TransForm.inImageTrans) }}
+                                        {{ form_widget(TransForm.inImageTrans) }}
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-12">
+                                <div class="row">
+                                    <div class="col-xs-12 col-md-12 col-sm-12">
+                                        {{ form_label(TransForm.title) }}
+                                        {{ form_widget(TransForm.title) }}
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-12">
+                                <div class="row">
+                                    <div class="col-xs-12 col-md-12 col-sm-12">
+                                        {{ form_label(TransForm.des) }}
+                                        {{ form_widget(TransForm.des) }}
+                                    </div>
+                                </div>
+                            </div>
+                            <hr>
+                            <div class="col-md-12">
+                                <div class="row">
+                                    <div class="col-xs-12 col-md-12 col-sm-12">
+                                        {{ form_label(TransForm.save) }}
+                                        {{ form_widget(TransForm.save) }}
+                                    </div>
+                                </div>
+                            </div>
+                            {{ form_end(TransForm) }}
+                        </div>
+                    </div>
+
+                </div>
+                <div role="tabpanel" class="tab-pane" id="research">
+                    dsfds
+                </div>
+            </div>
+
+        </div>
+    </div>
 {% endblock %}
+

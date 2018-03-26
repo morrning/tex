@@ -1,0 +1,21 @@
+{% extends 'AdminBundle:Default:basePanel.html.twig' %}
+{% block AppPageTitle %}مدیریت فیلد‌های ترجمه{% endblock %}
+{% block AppPageBody %}
+{{ grid | raw }}
+    <hr>
+    <div class="alert alert-success">افزودن فیلد‌ جدید</div>
+    {{ form_start(form) }}
+    <div class="row">
+        <div class="col-xs-12 col-md-4 col-sm-4">
+            {{ form_label(form.fieldName) }}
+            {{ form_widget(form.fieldName) }}
+        </div>
+    </div>
+    <br>
+    <div class="row">
+        <div class="col-xs-3 col-md-3 col-sm-3">
+            {{ form_widget(form.save) }}
+        </div>
+    </div>
+    {{ form_end(form) }}
+{% endblock %}

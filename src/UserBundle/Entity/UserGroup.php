@@ -27,6 +27,16 @@ class UserGroup
     private $groupName;
 
     /**
+     * @ORM\Column(type="string", length=100)
+     */
+    private $groupNameM;
+
+    /**
+     * @ORM\Column(type="string", length=254)
+     */
+    private $des;
+
+    /**
      * Get id
      *
      * @return int
@@ -51,5 +61,39 @@ class UserGroup
     {
         $this->groupName = $groupName;
     }
+
+    /**
+     * @return mixed
+     */
+    public function getDes()
+    {
+        return $this->des;
+    }
+
+    /**
+     * @param mixed $des
+     */
+    public function setDes($des)
+    {
+        $this->des = $des;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getGroupNameM()
+    {
+        return $this->groupNameM;
+    }
+
+    /**
+     * @param mixed $groupNameM
+     */
+    public function setGroupNameM($groupNameM)
+    {
+        $this->groupNameM = $groupNameM;
+    }
+
+
 }
 

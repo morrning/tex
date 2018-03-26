@@ -1,3 +1,13 @@
+payment:
+    resource: "@paymentBundle/Controller/"
+    type:     annotation
+    prefix:   /
+
+spage:
+    resource: "@spageBundle/Controller/"
+    type:     annotation
+    prefix:   /
+
 grid:
     resource: "@gridBundle/Controller/"
     type:     annotation
@@ -26,3 +36,4 @@ user:
 app:
     resource: '@AppBundle/Controller/'
     type: annotation
+

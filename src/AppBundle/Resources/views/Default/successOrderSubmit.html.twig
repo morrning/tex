@@ -1,0 +1,40 @@
+{% extends 'base.html.twig' %}
+{% block title %}سفارش ثبت شد{% endblock %}
+{% block body %}
+
+
+    <div class="row">
+        <div class="col-md-12 col-centered">
+            <div class="panel panel-primary">
+                <div class="panel-heading">
+                    <div class="panel-title">
+                        سفارش ثبت شد
+                    </div>
+                </div>
+                <div class="panel-body">
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <div class="alert alert-success">
+                                <span class="glyphicon glyphicon-check"></span>
+                                سفارش شما با موفقیت ثبت شد. به زودی با شما تماس خواهیم گرفت.
+                            </div>
+                        </div>
+                        <div class="col-xs-2 text-center">
+                            <a class="btn btn-success" href="{{ path('listOrder') }}">
+                                <span class="glyphicon glyphicon-shopping-cart"></span>
+                                لیست سفارشات شما</a>
+                        </div>
+                        <div class="col-xs-2 text-center">
+                            <a class="btn btn-primary" href="{{ path('home') }}">
+                                <span class="glyphicon glyphicon-home"></span>
+                                صفحه نخست
+                            </a>
+                        </div>
+                    </div>
+            </div>
+        </div>
+
+    </div>
+
+
+{% endblock %}

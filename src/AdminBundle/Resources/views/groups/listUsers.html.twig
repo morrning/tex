@@ -1,0 +1,28 @@
+{% extends 'AdminBundle:Default:basePanel.html.twig' %}
+{% block AppPageTitle %}لیست کاربران گروه{% endblock %}
+{% block AppPageBody %}
+    <div class="container">
+        <div class="well well-sm">
+            <div class="alert alert-info">
+                جهت افزودن کاربر به این گروه نام کاربری را وارد کنید.
+            </div>
+            {{ form_start(form) }}
+            <div class="row">
+                <div class="col-xs-5 col-md-5 col-sm-5">
+                    {{ form_label(form.username) }}
+                    {{ form_widget(form.username) }}
+                </div>
+            </div>
+            <br>
+
+            <div class="row">
+                <div class="col-xs-3 col-md-3 col-sm-3">
+                    {{ form_widget(form.save) }}
+                </div>
+            </div>
+            {{ form_end(form) }}
+        </div>
+
+    </div>
+    {{ grid | raw }}
+{% endblock %}

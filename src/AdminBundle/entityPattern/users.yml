@@ -1,0 +1,16 @@
+entity:
+      name: "UserBundle:User"
+items:
+
+    fullName:
+        title: "نام و نام خانوادگی"
+        type: "TextType"
+    username:
+        title: "نام کاربری"
+        type: "TextType"
+    mobile:
+        title: "موبایل"
+        type: "TextType"
+    tel:
+        title: "تلفن"
+        type: "TextType"

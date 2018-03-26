@@ -49,12 +49,26 @@ class mgr
             return $this->em->getRepository($entityName)->find($id);
         }
     }
-    public function select($entity,$params = null)
+    public function select($entity,$params = [],$orders =[])
     {
-        if(is_null($params))
-            return $this->em->getRepository($entity)->findAll();
-        else
-            return $this->em->getRepository($entity)->findBy($params);
+        return $this->em->getRepository($entity)->findBy($params,$orders);
+    }
+    public function update($obj)
+    {
+        $this->em->persist($obj);
+        $this->em->flush();
+    }
+
+    public function getByPage($entityName,$page=1,$perPage=20)
+    {
+        return $this->em->createQueryBuilder('q')
+            ->select('q')
+            ->from($entityName,'q')
+            ->setMaxResults($perPage)
+            ->setFirstResult($perPage * ($page -1) )
+            ->orderBy('q.id','DESC')
+            ->getQuery()
+            ->execute();
     }
 
 }
