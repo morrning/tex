@@ -15,6 +15,7 @@ use Symfony\Component\Form\Extension\Core\Type\TextType;
 use Symfony\Component\Form\Extension\Core\Type\SubmitType;
 use Symfony\Component\Form\Extension\Core\Type\FileType;
 use Symfony\Component\Form\FormError;
+use Zarinpal\Zarinpal;
 
 class DefaultController extends Controller
 {
@@ -39,7 +40,11 @@ class DefaultController extends Controller
                 return $this->redirectToRoute('transDashboard');
             return $this->redirectToRoute('userDashboard');
         }
-        return $this->render('AppBundle:Default:index.html.twig');
+        return $this->render('AppBundle:Default:index.html.twig',
+            [
+                'blogposts'=>$this->get('entityMgr.Mgr')->getByPage('AppBundle:blogPost',1,3)
+            ]
+        );
     }
 
     /**
@@ -342,6 +347,100 @@ class DefaultController extends Controller
                 'content'=>$body
             ]
         );
+
+    }
+
+    /**
+     * @Route("/user/list/bills", name="userListBills")
+     */
+    public function userListBills()
+    {
+        if (!$this->get('user.mgr')->IsLogedIn())
+            return $this->redirectToRoute('userLogin');
+        $uid = $this->get('user.mgr')->getThisUserInfo()->getId();
+        $bills =  $this->get('entityMgr.mgr')->select('AppBundle:Transaction',['userID'=>$uid],['id'=>'DESC']);
+
+        $grid = $this->get('entityMgr.listSimple')->render(
+            'AppBundle:listBills.yml',
+            'userViewBill',
+            null,
+            null,
+            null,
+            ['userID'=>$this->get('user.mgr')->getThisUserInfo()->getId()]
+        );
+
+        return $this->render('AppBundle:user:listBills.html.twig',
+            [
+                'grid'=>$grid
+            ]
+        );
+
+    }
+
+    /**
+     * @Route("/user/view/bill/{id}", name="userViewBill")
+     */
+    public function userViewBill($id)
+    {
+        if (!$this->get('user.mgr')->IsLogedIn())
+            return $this->redirectToRoute('userLogin');
+        $uid = $this->get('user.mgr')->getThisUserInfo();
+        if(!$this->get('entityMgr.mgr')->existByParams('AppBundle:Transaction',['id'=>$id,'userID'=>$uid->getId()]))
+            return $this->redirectToRoute('404');
+        $transaction = $this->get('entityMgr.mgr')->getById('AppBundle:Transaction',$id);
+        $order = $this->get('entityMgr.mgr')->getById('AppBundle:userOrder',$transaction->getOrderID());
+        return $this->render('AppBundle:user:userViewBill.html.twig',
+            [
+                'transaction'=>$transaction,
+                'user'=>$uid,
+                'order'=>$order
+            ]
+        );
+    }
+
+    /**
+     * @Route("/pay/bill/{id}", name="userPayBill")
+     */
+    public function userPayBill($id)
+    {
+        if (!$this->get('user.mgr')->IsLogedIn())
+            return $this->redirectToRoute('userLogin');
+        $uid = $this->get('user.mgr')->getThisUserInfo();
+        if(!$this->get('entityMgr.mgr')->existByParams('AppBundle:Transaction',['id'=>$id,'userID'=>$uid->getId()]))
+            return $this->redirectToRoute('404');
+        $transaction = $this->get('entityMgr.mgr')->getById('AppBundle:Transaction',$id);
+        $order = $this->get('entityMgr.mgr')->getById('AppBundle:userOrder',$transaction->getOrderID());
+        $Amount = (int) $transaction->getAmount()/10; //Amount will be based on Toman - Required
+        $Description = $order->getTitle(); // Required
+        $Email = $uid->getEmail(); // Optional
+        $Mobile = $uid->getMobile(); // Optional
+        $CallbackURL = 'http://www.thez.ir/pay/verifly'; // Required
+        $gateway = $this->get('entityMgr.mgr')->getById('paymentBundle:gateways',1);
+        $pay = new Zarinpal($gateway->getPublicKey());
+        $pay->request($CallbackURL,$Amount,$Description,$Email,$Mobile);
+        $pay->redirect();
+    }
+
+    /**
+     * @Route("/pay/verify", name="userPayVerify")
+     */
+    public function userPayVerify(Request $request)
+    {
+        if (!$this->get('user.mgr')->IsLogedIn())
+            return $this->redirectToRoute('userLogin');
+        $uid = $this->get('user.mgr')->getThisUserInfo();
+
+        $gateway = $this->get('entityMgr.mgr')->getById('paymentBundle:gateways',1);
+        $pay = new Zarinpal($gateway->getPublicKey());
+        $res = $pay->verify(100,894894);
+        if($res['Status'] != 'success')
+        {
+            return $this->render('AppBundle:user:successPayment.html.twig',
+                [
+                    'user'=>$uid
+                ]
+            );
+        }
 
     }
 

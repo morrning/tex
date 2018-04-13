@@ -21,6 +21,6 @@ class trnslatorController extends Controller
                 'user'=>$this->get('user.mgr')->getThisUserInfo()
             ]
         );
-        
+
     }
 }

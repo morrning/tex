@@ -91,7 +91,8 @@ class blogController extends Controller
         return $this->render('AdminBundle:blog:viewPost.html.twig',
             [
                 'submitter' => $this->get('entityMgr.mgr')->getById('UserBundle:User', $post->getSubmitter())->getFullName(),
-                'post' => $post
+                'post' => $post,
+                'blogposts'=>$this->get('entityMgr.Mgr')->getByPage('AppBundle:blogPost',1,5)
             ]
         );
     }
@@ -112,7 +113,8 @@ class blogController extends Controller
         }
         return $this->render('AdminBundle:blog:firstPage.html.twig',
             [
-                'posts' => $newPosts
+                'posts' => $newPosts,
+                'blogposts'=>$this->get('entityMgr.Mgr')->getByPage('AppBundle:blogPost',1,5)
             ]
         );
     }

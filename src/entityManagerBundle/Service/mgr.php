@@ -71,4 +71,10 @@ class mgr
             ->execute();
     }
 
+    public function insertEntity($entity)
+    {
+        $this->em->persist($entity);
+        return $this->em->flush();
+    }
+
 }

@@ -1,0 +1,131 @@
+{% extends 'AppBundle:user:basePanel.html.twig' %}
+{% block AppPageTitle %}صورت حساب پرداخت{% endblock %}
+{% block AppPageBody %}
+    <div class="container container-fluid">
+        <div class="row">
+            <div class="col-xs-12">
+                <div class="panel panel-primary">
+                    <div class="panel-heading">
+                        <div class="panel-title">
+                            اطلاعات مشتری
+                        </div>
+                    </div>
+                    <div class="panel-body">
+                        <div class="row">
+                            <div class="col-xs-6 col-sm-6 col-md-4 col-lg-3">
+                                <b>نام:{{ user.fullName }}</b>
+                            </div>
+                            <div class="col-xs-6 col-sm-6 col-md-4 col-lg-3">
+                                <b>تلفن:{{ user.tel }}</b>
+                            </div>
+                            <div class="col-xs-6 col-sm-6 col-md-4 col-lg-3">
+                                <b>موبایل:{{ user.mobile }}</b>
+                            </div>
+                            <div class="col-xs-6 col-sm-6 col-md-4 col-lg-3">
+                                <b>پست الکترونیکی:{{ user.email }}</b>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-12">
+                <div class="panel panel-primary">
+                    <div class="panel-heading">
+                        <div class="panel-title">
+                            اطلاعات سفارش
+                        </div>
+                    </div>
+                    <div class="panel-body">
+                        <div class="row">
+                            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                                <b>عنوان سفارش:{{ order.title }}</b>
+                            </div>
+                            <div class="col-xs-6 col-sm-6 col-md-4 col-lg-3">
+                                <b>زمینه:{{ order.field }}</b>
+                            </div>
+                            <div class="col-xs-6 col-sm-6 col-md-4 col-lg-3">
+                                <b>زبان ترجمه:{{ order.lang }}</b>
+                            </div>
+                            <div class="col-xs-6 col-sm-6 col-md-4 col-lg-3">
+                                <b>وضعیت سفارش:{{ order.state }}</b>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                                <b>بهای ترجمه(ریال):{{ order.price }}</b>
+                            </div>
+                            <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                                <b>تاریخ ثبت سفارش:{{ jdateService.jdate('Y/m/d',order.dateSubmit) }}</b>
+                            </div>
+                            <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                                <b>تاریخ تحویل:{{ jdateService.jdate('Y/m/d',order.dateTahvil) }}</b>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                                <b> توضیحات:{{ order.des }}</b>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-xs-12">
+                <div class="panel panel-primary">
+                    <div class="panel-heading">
+                        <div class="panel-title">
+                            اطلاعات پرداخت
+                        </div>
+                    </div>
+                    <div class="panel-body">
+                        <div class="row">
+                            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                                <b>تاریخ ایجاد فاکتور:{{ jdateService.jdate('Y/m/d',transaction.dateCreate) }}</b>
+                            </div>
+                            <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3">
+                                <b>مبلغ فاکتور(ریال):{{ transaction.amount }}</b>
+                            </div>
+                            <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3">
+                                <b>درصد از مبلغ سفارش:{{ transaction.percent }}</b>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                                <b>درگاه پرداخت:{{ transaction.gatewayName }}</b>
+                            </div>
+                            <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3">
+                                <b>تاریخ پرداخت:{{ transaction.datePay }}</b>
+                            </div>
+                            <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3">
+                                <b>شماره پیگیری:{{ transaction.payNum1 }}</b>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                                <b> وضعیت پرداخت:{{ transaction.paidText }}</b>
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="row">
+                            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                                <b>روش پرداخت:</b>
+                                <img class="img-responsive img-thumbnail img-rounded" src="{{ asset('images/zarinpal-logo-2.png') }}">
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="row">
+                            <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                                <a class="btn btn-lg btn-success" href="{{ path('userPayBill',{'id':transaction.id}) }}">همین حالا پرداخت کنید</a>
+                            </div>
+
+                            <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+
+                                <a class="btn btn-lg btn-default" href="{{ path('userListBills') }}">بازگشت</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

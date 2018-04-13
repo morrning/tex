@@ -10,7 +10,9 @@
                     </div>
                 </div>
                 <div class="panel-body">
-
+                    {% for blogpost in blogposts %}
+                        <li>{{ blogpost.title }}</li>
+                    {% endfor %}
                 </div>
             </div>
         </div>

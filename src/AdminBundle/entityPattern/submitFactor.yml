@@ -1,0 +1,11 @@
+entity:
+      name: "AppBundle:userOrder"
+items:
+
+    price:
+        title: "قیمت"
+        type: "NumberType"
+    isPublic:
+        title: "عمومی باشد؟"
+        type: "choiceType.array"
+        values: "خیر,بله"

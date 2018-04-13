@@ -1,0 +1,19 @@
+entity:
+      name: "AppBundle:Transaction"
+items:
+
+    amount:
+        title: "مقدار"
+        type: "TextType"
+    percent:
+        title: "درصد ریالی"
+        type: "TextType"
+    dateCreate:
+        title: "تاریخ ایجاد"
+        type: "hidden"
+        viewType: "jdateType"
+        default: "defined"
+    paidText:
+        title: "وضعیت پرداخت"
+        type: "TextType"
+

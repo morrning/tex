@@ -1,0 +1,7 @@
+entity:
+      name: "AppBundle:Transaction"
+items:
+    percent:
+        title: "درصد ریالی"
+        type: "choiceType.array"
+        values: "50,100"

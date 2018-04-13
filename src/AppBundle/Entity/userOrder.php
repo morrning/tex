@@ -126,6 +126,12 @@ class userOrder
      */
     private $dateTahvilG;
 
+    /**
+     * @var int
+     *
+     * @ORM\Column(name="isPublic", type="string", length=255, nullable=true)
+     */
+    private $isPublic;
 
     /**
      * Get id
@@ -496,5 +502,23 @@ class userOrder
     {
         return $this->dateTahvilG;
     }
+
+    /**
+     * @return int
+     */
+    public function getisPublic()
+    {
+        return $this->isPublic;
+    }
+
+    /**
+     * @param int $isPublic
+     */
+    public function setIsPublic($isPublic)
+    {
+        $this->isPublic = $isPublic;
+    }
+
+
 }
 

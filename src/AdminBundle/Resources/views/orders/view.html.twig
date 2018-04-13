@@ -108,7 +108,36 @@
             </div>
         </div>
         <div class="panel-body">
+            <div>
+                {{ gridTrans | raw }}
+            </div>
+            <div>
+                <div class="panel panel-success">
+                    <div class="panel-heading">
+                        <div class="panel-title">
+                            ایجاد صورت حساب پرداخت جدید
+                        </div>
+                    </div>
+                    <div class="panel-body">
+                        {{ form_start(form) }}
+                        <div class="row">
+                            <div class="col-xs-6 col-md-6 col-sm-6">
+                                {{ form_label(form.percent) }}
+                                {{ form_widget(form.percent) }}
+                            </div>
 
+                        </div>
+                        <br>
+                        <div class="row">
+                            <div class="col-xs-3 col-md-3 col-sm-3">
+                                {{ form_widget(form.save) }}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                {{ form_end(form) }}
+            </div>
         </div>
     </div>
     <div class="well well-sm">

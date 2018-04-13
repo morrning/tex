@@ -2,6 +2,8 @@
 
 namespace AdminBundle\Controller;
 
+use AppBundle\AppBundle;
+use AppBundle\Entity\factor;
 use Ivory\CKEditorBundle\Form\Type\CKEditorType;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
@@ -274,10 +276,55 @@ class DefaultController extends Controller
 
         $order = $this->get('entityMgr.mgr')->getById('AppBundle:userOrder',$id);
         $user = $this->get('entityMgr.mgr')->getById('UserBundle:User',$order->getSubmitter());
+        $transactions = $this->get('entityMgr.mgr')->select('AppBundle:Transaction',['orderID'=>$id]);
+        $gridTrans = $this->get('entityMgr.listSimple')->render(
+            'AdminBundle:viewTransactions.yml',
+            null,
+            null,
+            null,
+            null,
+            ['orderID'=>$id]
+        );
+        $form = $this->get('entityMgr.add')->render('AdminBundle:submitTransaction.yml');
+        $form->handleRequest($request);
+        if ($form->isSubmitted() && $form->isValid()) {
+            $canSubmitTrans = True;
+            $counter = 0;
+            if(! is_null($transactions))
+            {
+                foreach ($transactions as $tra)
+                {
+                    if(($tra->getPercent() == 100 || $counter == 1) || ($tra->getPercent() == 50 && $form->get('percent')->getData() == 100) || $order->getPrice() == 0)
+                    {
+                        $canSubmitTrans = FALSE;
+                        break;
+                    }
+
+                    $counter ++;
+                }
+            }
+            if($canSubmitTrans)
+            {
+                $percent = $form->get('percent')->getData();
+                $newTrans = new \AppBundle\Entity\Transaction();
+                $newTrans->setUserID($order->getSubmitter());
+                $newTrans->setDateCreate(time());
+                $newTrans->setPaid(False);
+                $newTrans->setPaidText("در انتظار پرداخت مشتری");
+                $newTrans->setAmount((int) (($order->getPrice()*$percent)/100));
+                $newTrans->setOrderID($id);
+                $newTrans->setPercent($percent);
+                $this->get('entityMgr.mgr')->insertEntity($newTrans);
+                return $this->redirectToRoute('adminViewOrder',['id'=>$id]);
+            }
+
+        }
         return $this->render('AdminBundle:orders:view.html.twig',
             [
                 'user'=>$user,
-                'order'=>$order
+                'order'=>$order,
+                'gridTrans'=>$gridTrans,
+                'form'=>$form->createView()
             ]
         );
     }

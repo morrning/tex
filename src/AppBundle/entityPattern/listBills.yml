@@ -1,0 +1,14 @@
+entity:
+      name: "AppBundle:Transaction"
+items:
+
+    amount:
+        title: "مبلغ(ریال)"
+        type: "TextType"
+    dateCreate:
+        title: "تاریخ ایجاد"
+        type: "jdateType"
+    paidText:
+        title: "وضعیت"
+        type: "TextType"
+        default: "defined"
