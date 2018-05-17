@@ -58,7 +58,8 @@ class DefaultController extends Controller
                 [
                     'submitter'=>$this->get('user.mgr')->getThisUserInfo()->getId(),
                     'dateSubmit'=>time(),
-                    'state'=>'ثبت سفارش اولیه'
+                    'state'=>'ثبت سفارش اولیه',
+                    'price'=>'0'
                 ]
             );
 
@@ -433,7 +434,7 @@ class DefaultController extends Controller
         $gateway = $this->get('entityMgr.mgr')->getById('paymentBundle:gateways',1);
         $pay = new Zarinpal($gateway->getPublicKey());
         $res = $pay->verify(100,894894);
-        if($res['Status'] != 'success')
+        if($res['Status'] == 'success')
         {
             return $this->render('AppBundle:user:successPayment.html.twig',
                 [

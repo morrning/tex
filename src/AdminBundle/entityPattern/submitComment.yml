@@ -1,0 +1,18 @@
+entity:
+      name: "AppBundle:blogComment"
+items:
+    body:
+        title: "متن دیدگاه"
+        type: "TextareaType"
+    submitter:
+        title: "hidden"
+        type: "hidden"
+        default: "defined"
+    dateSubmit:
+        title: "hidden"
+        type: "hidden"
+        default: "defined"
+    postID:
+        title: "hidden"
+        type: "hidden"
+        default: "defined"

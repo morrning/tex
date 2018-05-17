@@ -3,18 +3,6 @@
 {% block body %}
 <div class="row">
     <div class="col-md-3">
-        <div class="panel panel-info">
-            <div class="panel-heading">
-                <div class="panel-title">
-                    <span class="glyphicon glyphicon-usd"></span>
-                    موجودی حساب کاربری
-                </div>
-            </div>
-            <div class="panel-body">
-                0
-                ریال
-            </div>
-        </div>
         <div class="panel panel-primary">
             <div class="panel-heading">
                 <div class="panel-title">
@@ -31,6 +19,18 @@
                     <li><a class="btn btn-link" href="{{ path('userlistQuestions',{'type':'all','page':1}) }}"><span class="glyphicon glyphicon-th-list"></span> درخواست‌های پشتیبانی من </a></li>
                     <li><a class="btn btn-link" href="{{ path('userPersonalDictionaray') }}"><span class="glyphicon glyphicon-book"></span> دیکشنری شخصی </a></li>
                 </ul>
+            </div>
+        </div>
+        <div class="panel panel-primary">
+            <div class="panel-heading">
+                <div class="panel-title">
+                    ضمانت پرداخت
+                </div>
+            </div>
+            <div class="panel-body ">
+                <div class="text-center">
+                    <script src="https://www.zarinpal.com/webservice/TrustCode" type="text/javascript"></script>
+                </div>
             </div>
         </div>
     </div>

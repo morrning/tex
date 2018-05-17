@@ -117,20 +117,27 @@ class editSimple
         $entity = $this->em->getRepository($YamlForm['entity']['name'])->find($form->get('id')->getData());
         foreach($YamlForm['items'] as $key=>$item)
         {
-            $methodStr = 'set' . ucfirst($key);
-            if($item['type'] == 'choiceType.entity')
+            if($key != 'id')
             {
-                $subMethodStr = 'get' . ucfirst($item['colValue']);
-                $entity->$methodStr($form->get($key)->getData()->$subMethodStr());
+                $methodStr = 'set' . ucfirst($key);
+                if($item['type'] == 'choiceType.entity')
+                {
+                    $subMethodStr = 'get' . ucfirst($item['colValue']);
+                    $entity->$methodStr($form->get($key)->getData()->$subMethodStr());
+                }
+                elseif($item['type'] == 'jdateType') {
+                    $jdateService = new \DateBundle\Service\Date();
+                    $entity->$methodStr($jdateService->jallaliToUnixTime($form->get($key)->getData()));
+                }
+                elseif($item['type'] == 'hidden') {
+                    $entity->$methodStr($item['value']);
+                }
+                else
+                {
+                    $entity->$methodStr($form->get($key)->getData());
+                }
             }
-            elseif($item['type'] == 'jdateType') {
-                $jdateService = new \DateBundle\Service\Date();
-                $entity->$methodStr($jdateService->jallaliToUnixTime($form->get($key)->getData()));
-            }
-            else
-            {
-                $entity->$methodStr($form->get($key)->getData());
-            }
+
         }
 
         $this->em->persist($entity);

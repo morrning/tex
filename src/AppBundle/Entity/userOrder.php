@@ -108,7 +108,7 @@ class userOrder
     /**
      * @var int
      *
-     * @ORM\Column(name="price", type="bigint", nullable=true)
+     * @ORM\Column(name="price", type="string", nullable=true)
      */
     private $price;
 

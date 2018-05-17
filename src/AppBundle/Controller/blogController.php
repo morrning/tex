@@ -83,16 +83,35 @@ class blogController extends Controller
     /**
      * @Route("/blog/post/{id}", name="blogPost")
      */
-    public function blogPost($id)
+    public function blogPost(Request $request, $id)
     {
         if (!$this->get('entityMgr.mgr')->existByParams('AppBundle:blogPost', ['SID' => $id]))
             return $this->redirectToRoute('401');
         $post = $this->get('entityMgr.mgr')->select('AppBundle:blogPost', ['SID' => $id])[0];
+        $comments = $this->get('entityMgr.mgr')->select('AppBundle:blogComment', ['postID' => $post->getId()]);
+        foreach ($comments as $comment)
+        {
+            $comment->setSubmitter($this->get('entityMgr.mgr')->getById('UserBundle:User', $comment->getSubmitter())->getFullName());
+        }
+        $form = $this->get('entityMgr.add')->render('AdminBundle:submitComment.yml',
+            [
+                'submitter' => $this->get('user.mgr')->getThisUserInfo()->getId(),
+                'dateSubmit' => time(),
+                'postID' => $post->getId()
+            ]
+        );
+        $form->handleRequest($request);
+        if ($form->isSubmitted() && $form->isValid()) {
+            $this->get('entityMgr.add')->submit('AdminBundle:submitComment.yml', $form);
+            return $this->redirectToRoute('blogPost', ['id' => $post->getSID()]);
+        }
         return $this->render('AdminBundle:blog:viewPost.html.twig',
             [
                 'submitter' => $this->get('entityMgr.mgr')->getById('UserBundle:User', $post->getSubmitter())->getFullName(),
                 'post' => $post,
-                'blogposts'=>$this->get('entityMgr.Mgr')->getByPage('AppBundle:blogPost',1,5)
+                'blogposts'=>$this->get('entityMgr.Mgr')->getByPage('AppBundle:blogPost',1,5),
+                'form' => $form->createView(),
+                'comments' => $comments
             ]
         );
     }

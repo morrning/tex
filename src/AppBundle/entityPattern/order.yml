@@ -1,6 +1,10 @@
 entity:
       name: "AppBundle:userOrder"
 items:
+    price:
+        title: "hidden"
+        type: "hidden"
+        default: "defined"
     field:
         title: "زمینه:"
         type: "choiceType.entity"

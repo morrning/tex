@@ -1,0 +1,15 @@
+entity:
+      name: "AppBundle:userOrder"
+items:
+    id:
+        title: "hidden"
+        type: "hidden"
+        default: "defined"
+    state:
+        title: "hidden"
+        type: "hidden"
+        default: "defined"
+        value: "در انتظار پرداخت"
+    price:
+        title: "قیمت (ریال)"
+        type: "NumberType"

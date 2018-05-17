@@ -27,13 +27,37 @@
                 </div>
             {% endif %}
             {% if userMgr.isLogedIn() == true %}
+                <h3>ثبت دیدگاه</h3>
                 <div class="col-xs-12 col-md-12">
                     <div class="alert alert-success">
-                        ارسال دیدگاه
+                        {{ form_start(form) }}
+                        <div class="row">
+                            <div class="col-xs-12 col-md-12 col-sm-12">
+                                {{ form_label(form.body) }}
+                                {{ form_widget(form.body) }}
+                            </div>
+                        </div>
+                        <br>
+                        <div class="row">
+                            <div class="col-xs-3 col-md-3 col-sm-3">
+                                {{ form_widget(form.save) }}
+                            </div>
+                        </div>
+                        {{ form_end(form) }}
                     </div>
                 </div>
             {% endif %}
-
         </div>
+        <hr>
+        <h3>دیدگاه ها</h3>
+        {% for comment in comments %}
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                <div class="alert alert-info">
+                    <div class="">{{ comment.submitter }}</div>
+                    <hr>
+                    <div class="">{{ comment.body }}</div>
+                </div>
+            </div>
+        {% endfor %}
     </div>
 {% endblock %}

@@ -443,4 +443,63 @@ class DefaultController extends Controller
         );
     }
 
+    /**
+     * @Route("/admin/adminSetOrderPrice/{id}", name="adminSetOrderPrice")
+     */
+    public function adminSetOrderPrice(Request $request,$id)
+    {
+        if (!$this->get('user.mgr')->ThisUserHasPermission('adminAccess'))
+            return $this->redirectToRoute('401');
+        $order = $this->get('entityMgr.mgr')->getById('AppBundle:userOrder',$id);
+        $form = $this->get('entityMgr.edit')->render('AdminBundle:setOrderPrice.yml',$order->getId());
+
+        $form->handleRequest($request);
+        if ($form->isSubmitted() && $form->isValid()) {
+            $this->get('entityMgr.edit')->submit(
+                'AdminBundle:setOrderPrice.yml',
+                $form
+            );
+            return $this->redirectToRoute('adminViewOrder',['id'=>$id]);
+        }
+        return $this->render('AdminBundle:orders:setPrice.html.twig',
+            [
+                'form'=>$form->createView(),
+                'order'=>$order
+            ]
+        );
+    }
+
+    /**
+     * @Route("/admin/submitFactor/{id}", name="adminSubmitFactor")
+     */
+    public function adminSubmitFactor(Request $request,$id)
+    {
+        if (!$this->get('user.mgr')->ThisUserHasPermission('adminAccess'))
+            return $this->redirectToRoute('401');
+        $order = $this->get('entityMgr.mgr')->getById('AppBundle:userOrder',$id);
+        $form = $this->get('entityMgr.add')->render('AdminBundle:setOrderPrice.yml');
+
+        $form->handleRequest($request);
+        if ($form->isSubmitted() && $form->isValid()) {
+            $this->get('entityMgr.edit')->submit(
+                'AdminBundle:setOrderPrice.yml',
+                $form
+            );
+            return $this->redirectToRoute('adminViewOrder',['id'=>$id]);
+        }
+        return $this->render('AdminBundle:orders:submitFactor.html.twig',
+            [
+                'form'=>$form->createView(),
+                'order'=>$order
+            ]
+        );
+    }
+
 }
+
+
+
+
+
+
+

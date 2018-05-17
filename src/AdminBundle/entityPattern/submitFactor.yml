@@ -3,9 +3,5 @@ entity:
 items:
 
     price:
-        title: "قیمت"
+        title: "قیمت(ریال)"
         type: "NumberType"
-    isPublic:
-        title: "عمومی باشد؟"
-        type: "choiceType.array"
-        values: "خیر,بله"

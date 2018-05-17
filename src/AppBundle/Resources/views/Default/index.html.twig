@@ -81,7 +81,7 @@
                 <div class="panel-body ">
                     <ul>
                         {% for blogpost in blogposts %}
-                            <li>{{ blogpost.title }}</li>
+                            <li><a class="alert-link" href="{{ path('blogPost',{'id':blogpost.SID}) }}">{{ blogpost.title }}</a></li>
                         {% endfor %}
                     </ul>
                 </div>
